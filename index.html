@@ -11,25 +11,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-      /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
       .row.content {
         height: 100vh;
         position: relative;
       }
 
-      /* Set gray background color and 100% height */
       .sidenav {
+        min-height: 100vh;
         position: absolute;
-        top: 0px;
-        /* left: auto; */
         right: 0px;
-        bottom: 0px;
-        background: red;
-        background-color: #f1f1f1;
-        align-items: center;
+        color: aliceblue;
+        background-color: #05668d;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        /* height: 100vh; */
-        transition: 0.3s;
+        align-items: center;
+        width: 0%;
+        visibility: hidden;
+        transition: 0.5s ease;
       }
 
       .content {
@@ -51,15 +50,24 @@
         justify-content: center;
         font-size: calc(10px + 2vmin);
         color: white;
-      }
-
-      #mySidebar {
-        width: 0;
-        transition: 0.3s;
-      }
-
-      #splashed {
         transition: margin-right 0.5s;
+      }
+
+      .links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 2%;
+        background-color: #05668d;
+      }
+
+      .para {
+        padding-right: 15vh;
+      }
+
+      .project {
+        padding: 5vh;
       }
 
       .closebtn {
@@ -75,12 +83,12 @@
         cursor: pointer;
         background-color: #111;
         color: white;
-        padding: 10px 15px;
         border: none;
-        width: 100px;
+        width: 10vh;
+        height: 10vh;
         align-self: flex-end;
         position: absolute;
-        top: 40%;
+        top: 45%;
       }
 
       .openbtn:hover {
@@ -92,14 +100,26 @@
         color: white;
         padding: 15px;
       }
+      .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card {
+        background-color: rgb(113, 162, 205);
+      }
 
       /* On small screens, set height to 'auto' for sidenav and grid */
       @media screen and (max-width: 767px) {
+        .project {
+          padding: 2vh;
+        }
         .openbtn {
           visibility: hidden;
         }
         #mySidebar {
           width: 100%;
+          visibility: visible;
         }
         .sidenav {
           position: relative;
@@ -113,6 +133,9 @@
           position: relative;
           max-height: 100vh;
         }
+        .para {
+          padding-right: 0;
+        }
       }
     </style>
   </head>
@@ -121,18 +144,17 @@
       <div class="row content">
         <div class="content">
           <div class="splash" id="splashed">
-            <button class="openbtn" onclick="openNav(0,1)">
-              ☰ Open Sidebar
-            </button>
+            <button class="openbtn" onclick="openNav(0,1)">☰</button>
 
             <nav class="links">
+              <a href="test.html">Test</a>
               <a href="index.html">Home</a>
               <a href="about.html">About</a>
               <a href="contact.html">Contact me</a>
             </nav>
             <h1 class="title">Riccardo Cogoni</h1>
             <h3 class="desc">Full-Stack Developer</h3>
-            <p>
+            <p class="para">
               Motivated, personable Web Developer who loves to learn and
               creatively solve problems. Ambitious and excited to work on new
               projects and other challenging opportunities.
@@ -147,44 +169,39 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
             >×</a
           >
+
           <h4>My Projects</h4>
           <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#section1">Home</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
-            <li><a href="#section3">Project</a></li>
+            <li>
+              <div class="project">
+                <div class="card border-0 shadow">
+                  <img src="./images/code.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Project</h5>
+                    <div class="card-text text-black-50">
+                      Doing this and that
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="project">
+                <div class="card border-0 shadow">
+                  <img src="./images/api.jpeg" class="card-img-top" alt="..." />
+                  <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Project</h5>
+                    <div class="card-text text-black-50">
+                      Wow a second one here
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
             <li><a href="#section3">Project</a></li>
           </ul>
           <br />
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search Projects.."
-            />
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
-          </div>
         </div>
       </div>
     </div>
@@ -202,15 +219,19 @@
           document.getElementById('splashed').style.marginRight = '300px';
         } else if (md) {
           document.getElementById('mySidebar').style.width = '600px';
+          document.getElementById('mySidebar').style.visibility = 'visible';
           document.getElementById('splashed').style.marginRight = '600px';
         } else if (lg) {
           document.getElementById('mySidebar').style.width = '900px';
+          document.getElementById('mySidebar').style.visibility = 'visible';
+
           document.getElementById('splashed').style.marginRight = '900px';
         }
         // document.getElementById('splash').style.marginLeft = '250px';
       }
 
       function closeNav() {
+        document.getElementById('mySidebar').style.visibility = 'hidden';
         document.getElementById('mySidebar').style.width = '0';
         document.getElementById('splashed').style.marginRight = '0';
       }
