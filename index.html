@@ -24,42 +24,116 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cards.css" />
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+
+    <style></style>
   </head>
 
   <body>
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container">
-      <div class="row">
-        <div class="one-half column" style="margin-top: 25%">
-          <div class="splash">
-            <h1 class="title">Riccardo Cogoni</h1>
-            <h3 class="desc">Full-Stack Developer</h3>
-            <p>
-              Motivated, personable Web Developer who loves to learn and
-              creatively solve problems. Ambitious and excited to work on new
-              projects and other challenging opportunities.
-            </p>
-            <h2>Skills</h2>
-
-            <li>Javascript</li>
-            <li>HTML & CSS</li>
+    <div class="section categories">
+      <div class="container">
+        <div class="row">
+          <div class="one-half column category" style="margin-top: 25%">
+            <div class="splash">
+              <h1 class="title">Riccardo Cogoni</h1>
+              <h3 class="desc">Full-Stack Developer</h3>
+              <p>
+                Motivated, personable Web Developer who loves to learn and
+                creatively solve problems. Ambitious and excited to work on new
+                projects and other challenging opportunities.
+              </p>
+              <h2>Skills</h2>
+              <ul>
+                <li>Javascript</li>
+                <li>HTML & CSS</li>
+              </ul>
+            </div>
           </div>
+
+          <a
+            href="#next"
+            id="image"
+            class="one-half column category"
+            style="margin-top: 25%"
+          >
+            <h1 class="title">
+              view
+              more
+            </h1>
+          </a
+            href="#">
+          <!-- End Row -->
         </div>
-        <div class="five columns" style="margin-top: 25%">
-          <h1 class="title">image.png</h1>
-        </div>
-        <!-- End Row -->
+        
+        <!-- End container-->
       </div>
 
-      <!-- End Container -->
+      <!-- End section categories -->
     </div>
+
+    <section class="section categories hero-section" id="next">
+      <div class="container" id="sec1">
+        <h3 class="section-heading">Responsive Images</h3>
+        <p class="section-description">Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.</p>
+        
+          <div class="card-grid">
+            <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+              <div class="card__content">
+                <p class="card__category">Category</p>
+                <h3 class="card__heading">Example Card Heading</h3>
+              </div>
+            </a>
+            <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+              <div class="card__content">
+                <p class="card__category">Category</p>
+                <h3 class="card__heading">Example Card Heading</h3>
+              </div>
+            </a>
+            <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+              <div class="card__content">
+                <p class="card__category">Category</p>
+                <h3 class="card__heading">Example Card Heading</h3>
+              </div>
+            </li>
+            <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+              <div class="card__content">
+                <p class="card__category">Category</p>
+                <h3 class="card__heading">Example Card Heading</h3>
+              </div>
+            </a>
+          <div>
+        
+        <!-- <div class="row">
+          <div class="one-half column category">
+
+            <img class="u-max-full-width" src="images/api.jpeg">
+
+          </div>
+          <div class="one-half column category">
+
+            <img class="u-max-full-width" src="images/code.jpg">
+
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- cards -->
+
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    
   </body>
 </html>
