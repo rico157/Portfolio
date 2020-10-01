@@ -22,11 +22,13 @@
 
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/skeleton.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/typography.css" />
 
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/ico" href="images/favicon.ico" />
@@ -35,150 +37,36 @@
   </head>
 
   <body>
-    <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="section categories home">
-      <div class="container">
-        <div class="row">
-          <div class="one-half column category" style="margin-top: 25%">
-            <div class="splash">
-              <h1 class="title">Riccardo Cogoni</h1>
-              <h3 class="desc">Full-Stack Developer</h3>
-              <p>
-                Motivated, personable Web Developer who loves to learn and
-                creatively solve problems. Ambitious and excited to work on new
-                projects and other challenging opportunities.
-              </p>
-              
-            </div>
-          </div>
-          <!-- <a href="#next" id="image"></a href="#"> -->
-            <!-- End Row -->
-          </div>
-          
-          <!-- End container-->
-        </div>
-        <a href="#next" id="image"><span></span></a>
+    <div class="container">
+      <div class="home">
+        <h1 class="title">Riccardo Cogoni</h1>
+        <h3 class="description">Web Developer</h3>
+        <p class="paragraph">
+          Motivated, personable Web Developer who loves to learn and creatively
+          solve problems. Ambitious and excited to work on new projects and
+          other challenging opportunities.
+        </p>
+      </div>
 
-      <!-- End section categories -->
+      <div class="icons-container animated">
+        <button class="icon-container">
+          <i class="fab fa-github fa-2x"></i>
+        </button>
+
+        <button class="icon-container">
+          <i class="fab fa-linkedin-in fa-2x"></i>
+        </button>
+
+        <button class="icon-container">
+          <i class="fab fa-twitter fa-2x"></i>
+        </button>
+      </div>
     </div>
 
-    <section class="section categories hero-section" id="next">
-      <div class="container" id="sec1">
-        <h3 class="section-heading">Responsive Images</h3>
-        <p class="section-description">Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.</p>
-        
-          <div class="card-grid">
-            <a class="card" href="#">
-              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
-              <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-              </div>
-            </a>
-            <a class="card" href="#">
-              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
-              <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-              </div>
-            </a>
-            <a class="card" href="#">
-              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
-              <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-              </div>
-            </li>
-            <a class="card" href="#">
-              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
-              <div class="card__content">
-                <p class="card__category">Category</p>
-                <h3 class="card__heading">Example Card Heading</h3>
-              </div>
-            </a>
-          <div>
-        
-        <!-- <div class="row">
-          <div class="one-half column category">
-
-            <img class="u-max-full-width" src="images/api.jpeg">
-
-          </div>
-          <div class="one-half column category">
-
-            <img class="u-max-full-width" src="images/code.jpg">
-
-          </div>
-        </div> -->
-      </div>
-    </section>
-
-    <section class="section categories hero-section" id="next">
-      <div class="container" id="sec1">
-        <h3 class="section-heading">Responsive Images</h3>
-        <p class="section-description">Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.</p>
-        
-        <div class="social">
-          <div class="card">
-              <div class="face face1">
-                  <div class="content">
-                      <div class="icon">
-                          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                      </div>
-                  </div>
-              </div>
-              <div class="face face2">
-                  <div class="content">
-                      <h3>
-                          <a href="https://www.linkedin.com/in/adamdipinto/" target="_blank">_adamdipinto</a>
-                      </h3>
-                      <p>This is where I network and build my professional protfolio.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="card">
-              <div class="face face1">
-                  <div class="content">
-                      <div class="icon">
-                          <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                      </div>
-                  </div>
-              </div>
-              <div class="face face2">
-                  <div class="content">
-                      <h3>
-                          <a href="https://twitter.com/AdamDipinto" target="_blank">@AdamDipinto</a>
-                      </h3>
-                      <p>This is where I read news and network with different social groups.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="card">
-              <div class="face face1">
-                  <div class="content">
-                      <div class="icon">
-                          <i class="fa fa-github-square" aria-hidden="true"></i>
-                      </div>
-                  </div>
-              </div>
-              <div class="face face2">
-                  <div class="content">
-                      <h3>
-                          <a href="https://github.com/atom888" target="_blank">atom888</a>
-                      </h3>
-                      <p>This is where I share code and work on projects.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      </div>
-    </section>
-    
-
-
-    <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    
+    <script>
+      $('button').click(function () {
+        $('body').toggleClass('active');
+      });
+    </script>
   </body>
 </html>

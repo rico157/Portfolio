@@ -1,0 +1,72 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  color: #fff;
+}
+
+.container {
+  height: 100vh;
+}
+
+.home {
+  position: relative;
+  top: 10%;
+  left: 20%;
+  margin-right: 30%;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50%;
+}
+
+button,
+.icon-container {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: #fafafa;
+
+  padding: 1em 1.2em;
+  border-radius: 0.5em;
+  margin: 3em;
+  box-shadow: 7px 7px 16px rgba(8, 25, 36, 0.562),
+    -7px -7px 16px rgba(66, 133, 161, 0.452);
+  transform: scale(2);
+}
+
+.icon-container:hover {
+  color: lightgray;
+  animation: raise-container 0.5s;
+}
+
+.icon-container:active {
+  box-shadow: inset 7px 7px 14px rgba(8, 25, 36, 0.562),
+    inset -7px -7px 14px rgba(66, 133, 161, 0.452);
+}
+
+@keyframes raise-container {
+  from {
+    box-shadow: none;
+    transform: scale(2);
+  }
+
+  to {
+    box-shadow: 7px 7px 16px rgba(8, 25, 36, 0.562),
+      -7px -7px 16px rgba(66, 133, 161, 0.452);
+    transform: scale(2);
+  }
+}
