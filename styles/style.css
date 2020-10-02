@@ -396,7 +396,7 @@ a:hover {
   }
   .headz p {
     width: 70vw;
-    margin-bottom: 4em;
+    margin-bottom: 15em;
   }
 
   .card {
@@ -407,7 +407,6 @@ a:hover {
   .cards-container {
     width: 100vw;
     display: flex;
-
     align-items: center;
     justify-items: center;
     flex-direction: column;
