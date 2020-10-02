@@ -24,6 +24,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/typography.css" />
+    <link rel="stylesheet" href="./styles/media.css" />
 
     <link
       rel="stylesheet"
@@ -37,15 +38,19 @@
   </head>
 
   <body>
+   
     <div class="container">
-      <div class="home">
-        <h1 class="title">Riccardo Cogoni</h1>
+      <div class="home header">
+        <div>
+        <h1>Riccardo Cogoni</h1>
         <h3 class="description">Web Developer</h3>
         <p class="paragraph">
           Motivated, personable Web Developer who loves to learn and creatively
           solve problems. Ambitious and excited to work on new projects and
           other challenging opportunities.
         </p>
+      </div>
+      <i class="fas fa-terminal"></i>
       </div>
 
       <div class="icons-container animated">
@@ -60,13 +65,260 @@
         <button class="icon-container">
           <i class="fab fa-twitter fa-2x"></i>
         </button>
+        <button class="icon-container">
+          <i class="fas fa-envelope fa-2x"></i>
+        </button>
       </div>
+      <a href="#project-page" class="scroll"><span></span></a>
+    </div>
+    <div class="container" id="project-page">
+      <div class="home">
+        <h1 class="title">Projects</h1>
+        <h3 class="description">I built this stuff</h3>
+        <p class="paragraph">
+          Short paragraph describing some projects I have made and dara dara
+          paragraph describing some projects I have made and dara daraparagraph
+          describing some projects I have made and dara dara
+        </p>
+      </div>
+
+      <div class="cards-container animated">
+        <div class="card-container card">
+          <div class="card-content">
+            <!-- <span href="#" class="card-title">REST API</span> -->
+            <h4 class="card__description">Made with Northcoders</h4>
+            <h3 class="card__heading">REST API</h3>
+            
+              <p class="card_categories">
+                <span>RTE:</span>
+                <a href="https://nodejs.org/ " target="_blank">Node.js</a>
+              </a>
+              <p class="card_categories">
+                <span>Framework:</span>
+                <a href="https://expressjs.com/" target="_blank">Express</a>
+              </a>
+              <p class="card_categories">
+                <span>Database:</span>
+                <a href="https://www.postgresql.org/" target="_blank"
+                  >PostgreSQL</a
+                >
+              </a>
+              <p class="card_categories">
+                <span>Testing Suite:</span>
+                <a href="https://jestjs.io/" target="_blank">Jest</a>
+              </a>
+           
+          </div>
+          <div class="card_links">
+            <a href="#" target="_blank" class="fas fa-globe fa-4x"></a>
+            <a href="#" target="_blank" class="fab fa-github fa-4x"></a>
+          </div>
+        </div>
+
+        <div class="card-container card">
+          <div class="card-content">
+            <!-- <span href="#" class="card-title">REST API</span> -->
+            <h4 class="card__description">Web app</h4>
+            <h3 class="card__heading">REACT APP</h3>
+            
+              <p class="card_categories">
+                <span>Language:</span>
+                <a href="https://nodejs.org/ " target="_blank">JavaScript</a>
+              </a>
+              <p class="card_categories">
+                <span>Framework:</span>
+                <a href="https://expressjs.com/" target="_blank">React JS</a>
+              </a>
+           
+          </div>
+          <div class="card_links">
+            <a href="#" target="_blank" class="fas fa-globe fa-4x"></a>
+            <a href="#" target="_blank" class="fab fa-github fa-4x"></a>
+          </div>
+        </div>
+
+        <div class="card-container card">
+          <div class="card-content">
+            <!-- <span href="#" class="card-title">REST API</span> -->
+            <h4 class="card__description">Game</h4>
+            <h3 class="card__heading">Shoot Up</h3>
+            
+              <p class="card_categories">
+                <span>Language:</span>
+                <a href="https://nodejs.org/ " target="_blank">JavaScript</a>
+              </a>
+              <p class="card_categories">
+                <span>Framework:</span>
+                <a href="https://expressjs.com/" target="_blank">None</a>
+              </a>
+              <p class="card_categories">
+                <span>Enviroment:</span>
+                <a href="https://www.postgresql.org/" target="_blank"
+                  >Canvas HTML</a
+                >
+              </a>
+           
+          </div>
+          <div class="card_links">
+            <a href="#" target="_blank" class="fas fa-globe fa-4x"></a>
+            <a href="#" target="_blank" class="fab fa-github fa-4x"></a>
+          </div>
+        </div>
+      </div>
+      <a href="#project-page" class="scroll"><span></span></a>
     </div>
 
+    <div class="container" id="experience-page">
+      <div class="home">
+        <h1 class="title">Experiences</h1>
+        <h3 class="description">What I've learnt</h3>
+        <p class="paragraph">
+          Short paragraph describing some projects I have made and dara dara
+          paragraph describing some projects I have made and dara daraparagraph
+          describing some projects I have made and dara dara
+        </p>
+      </div>
+
+      <div class="cards-container animated">
+        <div class="card-container card">
+          <div class="card-content">
+            <!-- <span href="#" class="card-title">REST API</span> -->
+            <h4 class="card__description">What I've learnt so far</h4>
+            <h3 class="card__heading">Fundamentals</h3>
+            
+              <p class="card_categories">
+                <span>Follow:</span>
+                <a href="https://nodejs.org/ " target="_blank">Best Practices</a>
+                &
+                <a href="https://expressjs.com/" target="_blank">TDD</a>
+                
+              </a>
+              <p class="card_categories">
+                <span>Create:</span>
+                <a href="https://expressjs.com/" target="_blank">RESTful API w</a>
+              </a>
+              <p class="card_categories">
+                <span>Database:</span>
+                <a href="https://www.postgresql.org/" target="_blank"
+                  >PostgreSQL,</a
+                >
+                <a href="https://www.postgresql.org/" target="_blank"
+                >Knex</a
+              >
+              </a>
+              <p class="card_categories">
+                <span>Testing Suite:</span>
+                <a href="https://jestjs.io/" target="_blank">Jest,</a>
+                <a href="https://jestjs.io/" target="_blank">Mocha</a>
+              </a>
+              <p class="card_categories">
+                <span>Libraries:</span>
+                <a href="https://jestjs.io/" target="_blank">Jest,</a>
+                <a href="https://jestjs.io/" target="_blank">Mocha</a>
+              </a>
+            
+          </div>
+        </div>
+
+        <div class="card-container card">
+          <div class="card-content">
+            <!-- <span href="#" class="card-title">REST API</span> -->
+            <h4 class="card__description">What I've used so far</h4>
+            <h3 class="card__heading">FRONT END</h3>
+            
+              <p class="card_categories">
+                <span>RTE:</span>
+                <a href="https://nodejs.org/ " target="_blank">Node.js</a>
+              </a>
+              <p class="card_categories">
+                <span>Framework:</span>
+                <a href="https://expressjs.com/" target="_blank">Express</a>
+              </a>
+              <p class="card_categories">
+                <span>Database:</span>
+                <a href="https://www.postgresql.org/" target="_blank"
+                  >PostgreSQL</a
+                >
+              </a>
+              <p class="card_categories">
+                <span>Testing Suite:</span>
+                <a href="https://jestjs.io/" target="_blank">Jest</a>
+              </a>
+           
+        </div>
+      </div>
+      <a href="#project-page" class="scroll"><span></span></a>
+    </div>
+
+    <div class="container" id="about-page">
+      <div class="cards-container animated">
+        <div class="card-container card">
+          <div class="card-content">
+            <div class="home">
+              <h1 class="card__heading">About me</h1>
+              <h3 class="card__description">I built this stuff</h3>
+              <p class="paragraph">
+                Short paragraph describing some projects I have made and dara
+                dara paragraph describing some projects I have made and dara
+                daraparagraph describing some projects I have made and dara dara
+              </p>
+              <p class="paragraph">
+                Short paragraph describing some projects I have made and dara
+                dara paragraph describing some projects I have made and dara
+                daraparagraph describing some projects I have made and dara dara
+              </p>
+            </div>
+            <div class="card_links">
+              <a href="#" target="_blank" class="fas fa-globe fa-4x"></a>
+              <a href="#" target="_blank" class="fab fa-github fa-4x"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#project-page" class="scroll"><span></span></a>
+    </div>
+    <a href="#top" id="myBtn" class="fas fa-chevron-circle-up fa-4x"></a>
+
+
+     <nav class="navbar" id="navbar">
+      
+          <a href="#" class="nav-a">
+            HOME
+          </a>
+       
+          <a href="#project-page" class="nav-a">
+            PROJECTS
+          </a>
+        
+          <a href="#experience-page" class="nav-a">
+            EXPERIENCES
+          </a>
+               
+          
+        
+          <a href="#about-page" class="nav-a">
+            ABOUT
+          </a>
+          <a class="nav-a contact">
+            CONTACT ME
+          </a>
+    </nav>
     <script>
+      window.onscroll = function () {
+        if (window.pageYOffset >= 1000) {
+          document.getElementById('myBtn').style.visibility = 'visible';
+          
+          document.getElementById('myBtn').style.animation = 'raise-button 2s';
+        } else {
+          document.getElementById('myBtn').style.visibility = 'hidden';
+        }
+        
+      };
+
       $('button').click(function () {
         $('body').toggleClass('active');
       });
     </script>
+
   </body>
 </html>
