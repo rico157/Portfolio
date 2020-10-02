@@ -146,7 +146,6 @@ a:hover {
 
 .card {
   height: 300px;
-  min-width: 250px;
   width: 250px;
 
   margin: 10em;
@@ -317,4 +316,112 @@ a:hover {
 
 #myBtn:hover {
   color: rgb(110, 150, 198); /* Add a dark-grey background on hover */
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+}
+
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+  body {
+    /* display: none; */
+  }
+
+  .container {
+    /* display: none; */
+  }
+
+  .scroll {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+
+  .home {
+    position: absolute;
+    top: 20vh;
+    left: 0%;
+
+    margin: 0%;
+  }
+
+  .header {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .header p {
+    width: 70vw;
+  }
+
+  .header i {
+    margin-bottom: 10vh;
+
+    font-size: 15rem;
+  }
+
+  .icons-container {
+    top: 0;
+    align-content: space-betweens;
+  }
+
+  .icon-container {
+    margin: 2em;
+    transform: scale(1.5);
+  }
+
+  #project-page {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    /* left: 20%; */
+    margin-left: 25vw;
+  }
+
+  .project h1 {
+    width: 70vw;
+  }
+  .project h3 {
+    width: 70vw;
+  }
+  .headz p {
+    width: 70vw;
+    margin-bottom: 4em;
+  }
+
+  .card {
+    margin-top: 2em;
+    transform: scale(1.2);
+  }
+
+  .cards-container {
+    width: 100vw;
+    display: flex;
+
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+  }
+
+  #experience-page {
+    display: none;
+  }
+
+  #about-page {
+    display: none;
+  }
+
+  #myBtn {
+    display: none;
+  }
 }
