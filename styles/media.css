@@ -18,13 +18,9 @@
     }
   }
 
-  .container {
-  }
+  .container {}
 
-  .home {
-    left: 10%;
-    margin-right: 50%;
-  }
+
 
   .icons-container {
     display: flex;
