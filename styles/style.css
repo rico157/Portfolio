@@ -336,10 +336,14 @@ a:hover {
 }
 
 #project-page .header {
-  margin-left: 20em;
+
+  /* margin-left: 20em; */
   width: 70%;
   padding-bottom: 10%;
   margin-top: 5em;
+  text-align: center;
+  padding-top: 0em;
+  margin-left: 20em;
 
 
 }
