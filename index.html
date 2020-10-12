@@ -39,7 +39,7 @@
 
   <body>
     <div class="page">
-      <div class="container">
+      <div class="container" id="homepage">
         <div class="home">
           <div class="header">
             <h3>Riccardo Cogoni</h3>
@@ -94,135 +94,285 @@
       <div class="container" id="project-page">
         <div class="home">
           <div class="header">
-            <h3 class="title">Projects</h3>
-            <h4 class="description">I built this stuff</h4>
-            <p class="paragraph">
-              Short paragraph describing some projects I have made and dara dara
-              paragraph describing some projects I have made and dara
-              daraparagraph describing some projects I have made and dara dara
-            </p>
+            <h3 class="title">Portfolio Showcase</h3>
+            <!-- <h6 class="description">To see more projects <a>click here</a></h6> -->
+            <!-- <p class="paragraph"></p> -->
           </div>
         </div>
         <div class="cards-container">
-          <div id="api-card" class="card">
-            <div class="card-image"></div>
+          <!-- Line 1 -->
 
-            <div class="card-content">
-              <!-- <span href="#" class="card-title">REST API</span> -->
-              <h4 class="card__description">Made with Northcoders</h4>
-              <h3 class="card__heading">REST API</h3>
+          <div class="div-cards">
+            <!-- Pair GAME -->
+            <div id="pair-card" class="card">
+              <div class="card-image"></div>
+              <div class="card-content">
+                <!-- <span href="#" class="card-title">REST API</span> -->
+                <h4 class="card__description">
+                  Pair Programming -
+                  <a href="https://northcoders.com/">Northcoders</a>
+                </h4>
 
-              <p class="card_categories">
-                <span>RTE:</span>
-                <a href="https://nodejs.org/ " target="_blank">Node.js</a>
-              </p>
+                <h3 class="card__heading">Noughts and Crosses</h3>
 
-              <p class="card_categories">
-                <span>Framework:</span>
-                <a href="https://expressjs.com/" target="_blank">Express</a>
-              </p>
+                <p class="card_categories">
+                  <span>Duration:</span>
+                  <i>2 Days</i>
+                </p>
 
-              <p class="card_categories">
-                <span>Database:</span>
-                <a href="https://www.postgresql.org/" target="_blank"
-                  >PostgreSQL</a
-                >
-              </p>
+                <p class="card_categories">
+                  <span>Framework:</span>
+                  <a href="https://reactjs.org/" target="_blank">React JS</a>
+                </p>
+              </div>
 
-              <p class="card_categories">
-                <span>Testing Suite:</span>
-                <a href="https://jestjs.io/" target="_blank">Jest</a>
-              </p>
-            </div>
-
-            <div class="card_links">
-              <a
-                href="https://rico-nc-news.herokuapp.com/"
-                target="_blank"
-                class="fas fa-globe fa-4x"
-              ></a>
-              <a
-                href="https://github.com/rico157/rico-fake-news-api"
-                target="_blank"
-                class="fab fa-github fa-4x"
-              ></a>
-            </div>
-          </div>
-
-          <div id="react-card" class="card">
-            <div class="card-image"></div>
-            <div class="card-content">
-              <!-- <span href="#" class="card-title">REST API</span> -->
-              <h4 class="card__description">Web app</h4>
-              <h3 class="card__heading">REACT APP</h3>
-
-              <p class="card_categories">
-                <span>Language:</span>
-                <a href="https://www.javascript.com/ " target="_blank"
-                  >JavaScript</a
-                >
-              </p>
-
-              <p class="card_categories">
-                <span>Framework:</span>
-                <a href="https://reactjs.org/" target="_blank">React JS</a>
-              </p>
-            </div>
-
-            <div class="card_links">
-              <a
-                href="https://rico-fake-news.herokuapp.com/"
-                target="_blank"
-                class="fas fa-globe fa-4x"
-              ></a>
-              <a
-                href="https://github.com/rico157/rico-fake-news"
-                target="_blank"
-                class="fab fa-github fa-4x"
-              ></a>
-            </div>
-          </div>
-
-          <div id="shootup-card" class="card">
-            <div class="card-image"></div>
-            <div class="card-content">
-              <!-- <span href="#" class="card-title">REST API</span> -->
-              <h4 class="card__description">Game</h4>
-              <h3 class="card__heading">Shoot Up</h3>
-
-              <p class="card_categories">
-                <span>Language:</span>
-                <a href="https://www.javascript.com/" target="_blank"
-                  >JavaScript</a
-                >
-              </p>
-
-              <p class="card_categories">
-                <span>Framework:</span>
-                None
-              </p>
-
-              <p class="card_categories">
-                <span>Render:</span>
+              <div class="card_links">
                 <a
-                  href="https://www.w3schools.com/html/html5_canvas.asp"
+                  href="https://noughts-and-crosses-challenge.herokuapp.com/"
                   target="_blank"
-                  >Canvas HTML</a
-                >
-              </p>
+                  class="fas fa-globe fa-4x"
+                ></a>
+                <a
+                  href="https://github.com/rico157/noughts-and-crosses"
+                  target="_blank"
+                  class="fab fa-github fa-4x"
+                ></a>
+              </div>
+            </div>
+            <!-- CHECKLIST API -->
+            <div id="checklist-card" class="card">
+              <div class="card-image"></div>
+
+              <div class="card-content">
+                <!-- <span href="#" class="card-title">REST API</span> -->
+                <h4 class="card__description">Web App API</h4>
+                <h3 class="card__heading">CHECKLIST</h3>
+
+                <p class="card_categories">
+                  <span>RTE:</span>
+                  <a href="https://nodejs.org/ " target="_blank">Node.js</a>
+                </p>
+
+                <p class="card_categories">
+                  <span>SERVER:</span>
+                  <a href="https://expressjs.com/" target="_blank">Express</a>
+                </p>
+
+                <p class="card_categories">
+                  <span>Database:</span>
+                  <a href="https://www.postgresql.org/" target="_blank"
+                    >PostgreSQL</a
+                  >
+                  / <a href="http://knexjs.org/" target="_blank">Knex.js</a>
+                </p>
+
+                <p class="card_categories">
+                  <span>Testing Suite:</span>
+                  <a href="https://jestjs.io/" target="_blank">Jest</a>
+                </p>
+              </div>
+
+              <div class="card_links">
+                <a
+                  href="https://rico-checklist-api.herokuapp.com/"
+                  target="_blank"
+                  class="fas fa-globe fa-4x"
+                ></a>
+                <a
+                  href="https://github.com/rico157/checklist-api"
+                  target="_blank"
+                  class="fab fa-github fa-4x"
+                ></a>
+              </div>
             </div>
 
-            <div class="card_links">
-              <a
-                href="https://rico157.github.io/shootup/"
-                target="_blank"
-                class="fas fa-globe fa-4x"
-              ></a>
-              <a
-                href="https://github.com/rico157/shootup"
-                target="_blank"
-                class="fab fa-github fa-4x"
-              ></a>
+            <!-- HTML GAME -->
+            <div id="shootup-card" class="card">
+              <div class="card-image"></div>
+              <div class="card-content">
+                <!-- <span href="#" class="card-title">REST API</span> -->
+                <h4 class="card__description">Game</h4>
+                <h3 class="card__heading">Shoot Up</h3>
+
+                <p class="card_categories">
+                  <span>Status: </span>
+                  <i style="color: red">Work in progress</i>
+                </p>
+                <p class="card_categories">
+                  <span>Language:</span>
+                  <a href="https://www.javascript.com/" target="_blank"
+                    >JavaScript</a
+                  >
+                </p>
+
+                <p class="card_categories">
+                  <span>Render:</span>
+                  <a
+                    href="https://www.w3schools.com/html/html5_canvas.asp"
+                    target="_blank"
+                    >Canvas HTML</a
+                  >
+                </p>
+                <p class="card_categories">
+                  <span style="opacity: 0"> ...</span>
+                </p>
+              </div>
+
+              <div class="card_links">
+                <a
+                  href="https://rico157.github.io/shootup/"
+                  target="_blank"
+                  class="fas fa-globe fa-4x"
+                ></a>
+                <a
+                  href="https://github.com/rico157/shootup"
+                  target="_blank"
+                  class="fab fa-github fa-4x"
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Line 2 -->
+          <div class="div-cards">
+            <!-- REST API -->
+            <div id="api-card" class="card">
+              <div class="card-image"></div>
+
+              <div class="card-content">
+                <!-- <span href="#" class="card-title">REST API</span> -->
+                <h4 class="card__description">
+                  Made with <a href="https://northcoders.com/">Northcoders</a>
+                </h4>
+                <h3 class="card__heading">REST API</h3>
+
+                <p class="card_categories">
+                  <span>RTE:</span>
+                  <a href="https://nodejs.org/ " target="_blank">Node.js</a>
+                </p>
+
+                <p class="card_categories">
+                  <span>Framework:</span>
+                  <a href="https://expressjs.com/" target="_blank">Express</a>
+                </p>
+
+                <p class="card_categories">
+                  <span>Database:</span>
+                  <a href="https://www.postgresql.org/" target="_blank"
+                    >PostgreSQL</a
+                  >
+                </p>
+
+                <p class="card_categories">
+                  <span>Testing Suite:</span>
+                  <a href="https://jestjs.io/" target="_blank">Jest</a>
+                </p>
+              </div>
+
+              <div class="card_links">
+                <a
+                  href="https://rico-nc-news.herokuapp.com/"
+                  target="_blank"
+                  class="fas fa-globe fa-4x"
+                ></a>
+                <a
+                  href="https://github.com/rico157/rico-fake-news-api"
+                  target="_blank"
+                  class="fab fa-github fa-4x"
+                ></a>
+              </div>
+            </div>
+            <!-- REACT APP -->
+            <div
+              id="react-card"
+              class="card"
+              style="opacity: 0.2; cursor: not-allowed"
+            >
+              <div class="card-image"></div>
+              <div class="card-content">
+                <!-- <span href="#" class="card-title">REST API</span> -->
+                <h4 class="card__description">
+                  Made with <a href="https://northcoders.com/">Northcoders</a>
+                </h4>
+
+                <h3 class="card__heading">REACT APP</h3>
+
+                <p class="card_categories">
+                  <span>Language:</span>
+                  <a href="https://www.javascript.com/ " target="_blank"
+                    >JavaScript</a
+                  >
+                </p>
+                <p class="card_categories">
+                  <span>Database:</span>
+                  <a href="https://www.postgresql.org/" target="_blank"
+                    >PostgreSQL</a
+                  >
+                </p>
+                <p class="card_categories">
+                  <span>Database:</span>
+                  <a href="https://www.postgresql.org/" target="_blank"
+                    >PostgreSQL</a
+                  >
+                </p>
+
+                <p class="card_categories">
+                  <span>Framework:</span>
+                  <a href="https://reactjs.org/" target="_blank">React JS</a>
+                </p>
+              </div>
+
+              <div class="card_links">
+                <a
+                  href="https://rico-fake-news.herokuapp.com/"
+                  target="_blank"
+                  class="fas fa-globe fa-4x"
+                ></a>
+                <a
+                  href="https://github.com/rico157/rico-fake-news"
+                  target="_blank"
+                  class="fab fa-github fa-4x"
+                ></a>
+              </div>
+            </div>
+
+            <!-- final APP -->
+            <div
+              id="final-card"
+              class="card"
+              style="opacity: 0.2; cursor: not-allowed"
+            >
+              <div class="card-image"></div>
+              <div class="card-content">
+                <!-- <span href="#" class="card-title">REST API</span> -->
+                <h4 class="card__description">
+                  Made with <a href="https://northcoders.com/">Northcoders</a>
+                </h4>
+                <h3 class="card__heading">FINAL PROJECT</h3>
+
+                <p class="card_categories">
+                  <span>Language:</span>
+                  <a href="#" target="_blank">Unknown</a>
+                </p>
+                <p class="card_categories">
+                  <span>Database:</span>
+                  <a href="#" target="_blank">Unknown</a>
+                </p>
+                <p class="card_categories">
+                  <span>Libraries:</span>
+                  <a href="#" target="_blank">Unknown</a>
+                </p>
+
+                <p class="card_categories">
+                  <span>Framework:</span>
+                  <a href="#" target="_blank">Unknown</a>
+                </p>
+              </div>
+
+              <div class="card_links">
+                <a href="#" target="_blank" class="fas fa-globe fa-4x"></a>
+                <a href="#" target="_blank" class="fab fa-github fa-4x"></a>
+              </div>
             </div>
           </div>
         </div>
@@ -339,15 +489,16 @@
     <nav class="navbar" id="navbar">
       <a href="./new-home/index.html" class="nav-a"> HOME </a>
 
-      <a href="#project-page" class="nav-a"> PROJECTS </a>
-
+      <a href="#project-page" class="nav-a"> PORTFOLIO </a>
+      <!-- 
       <a href="#experience-page" class="nav-a"> EXPERIENCES </a>
-      <a href="./experiences/index.html" class="nav-a"> EXPERIENCES PAGE </a>
+      <a href="./experiences/index.html" class="nav-a"> EXPERIENCES PAGE </a> -->
 
       <a href="#about-page" class="nav-a"> ABOUT </a>
       <a class="nav-a contact"> CONTACT ME </a>
     </nav>
     <script>
+      let lastScroll = 0;
       window.onscroll = function () {
         if (window.pageYOffset >= 1000) {
           document.getElementById('myBtn').style.visibility = 'visible';
@@ -357,6 +508,16 @@
           document.getElementById('myBtn').style.visibility = 'hidden';
         }
       };
+      // window.addEventListener('scroll', function () {
+      //   if (window.pageYOffset >= 1000) {
+      //     lastScroll = window.pageYOffset;
+      //     document.getElementById('navbar').style.animation =
+      //       'unraise-button 1s';
+      //     document.getElementById('navbar').style.visibility = 'hidden';
+      //   } else if (window.pageYOffset <= 1000 && lastScroll > 900) {
+      //     document.getElementById('navbar').style.visibility = 'visible';
+      //   }
+      // });
     </script>
   </body>
 </html>
