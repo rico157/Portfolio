@@ -62,7 +62,7 @@ textarea {
 
 .screen-body-item {
     flex: 1;
-    padding: 20px;
+    padding: 40px;
 
 }
 
@@ -148,7 +148,7 @@ textarea {
 }
 
 .screen {
-    width: 100%;
+    width: 600px;
 }
 
 
@@ -182,7 +182,13 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
+    #contact-page {
+        width: 90vw !important;
+    }
 
+    .screen {
+        width: 90%;
+    }
 
     .screen-body {
         padding: 40px;
