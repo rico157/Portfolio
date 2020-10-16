@@ -91,3 +91,45 @@
     display: none;
   }
 }
+
+@keyframes raise-thanks {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes long-thanks {
+  0% {}
+
+  20% {
+    height: 370px;
+  }
+
+  90% {
+    height: 370px;
+  }
+
+  100% {
+    height: 300px;
+  }
+
+
+}

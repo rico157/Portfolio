@@ -383,13 +383,14 @@
       <div class="container" id="contact-page">
         <div class="background">
           <div class="form">
-            <div class="screen">
+            <div class="screen" id="screen">
               <div class="screen-body">
                 <div class="screen-body-item left">
                   <div class="app-title">
                     <span>CONTACT</span>
                     <span>ME</span>
                   </div>
+                  <div class="app-contact" id="thank">Thank you!</div>
                 </div>
                 <div class="screen-body-item">
                   <div class="app-form">
@@ -563,6 +564,8 @@
       const mailInput = document.getElementById('mail');
       const messageInput = document.getElementById('message');
       const sendInput = document.getElementById('send');
+      const valid = document.getElementById('thank');
+      const contact = document.getElementById('screen');
 
       const mailData = {
         _replyto: '',
@@ -604,6 +607,8 @@
         }).then((data) => {
           if (data.status >= 400) {
             mailInput.style.borderColor = 'red';
+          } else if (data.status < 300) {
+            mailInput.style.borderColor = '#e8e925';
           } else {
             mailInput.style.borderColor = 'rgba(66, 132, 161, 0.678)';
           }
@@ -629,6 +634,13 @@
         }).then((data) => {
           if (data.status >= 400) {
             mailInput.style.borderColor = 'red';
+          } else if (data.status < 300) {
+            mailInput.style.borderColor = '#e8e925';
+            messageInput.style.borderColor = '#e8e925';
+            valid.style.animation = 'raise-thanks 17s';
+            if (window.innerWidth < 750) {
+              contact.style.animation = 'long-thanks 17s';
+            }
           }
         });
         fetch(FF, {
@@ -645,6 +657,13 @@
         }).then((data) => {
           if (data.status >= 400) {
             mailInput.style.borderColor = 'red';
+          } else if (data.status < 300) {
+            mailInput.style.borderColor = '#e8e925';
+            messageInput.style.borderColor = '#e8e925';
+            valid.style.animation = 'raise-thanks 17s';
+            if (window.innerWidth < 750) {
+              contact.style.animation = 'long-thanks 17s';
+            }
           }
         });
       });
