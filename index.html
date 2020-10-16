@@ -568,9 +568,29 @@
         _replyto: '',
         message: ''
       };
+      const FF = 'https://formspree.io/f/moqpebej';
+      const URL = 'https://ztytqosjqt.herokuapp.com/zhRvlDyctB';
       mailInput.addEventListener('change', (e) => {
         mailData._replyto = e.target.value;
-        fetch('https://formspree.io/f/moqpebej', {
+        fetch(URL, {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(mailData)
+        }).then((data) => {
+          if (data.status >= 400) {
+            mailInput.style.borderColor = 'red';
+          } else {
+            mailInput.style.borderColor = 'rgba(66, 132, 161, 0.678)';
+          }
+        });
+        fetch(FF, {
           method: 'POST',
           mode: 'cors',
           cache: 'no-cache',
@@ -595,7 +615,23 @@
       });
 
       sendInput.addEventListener('click', (e) => {
-        fetch('https://formspree.io/f/moqpebej', {
+        fetch(URL, {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(mailData)
+        }).then((data) => {
+          if (data.status >= 400) {
+            mailInput.style.borderColor = 'red';
+          }
+        });
+        fetch(FF, {
           method: 'POST',
           mode: 'cors',
           cache: 'no-cache',
