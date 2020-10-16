@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/typography.css" />
     <link rel="stylesheet" href="./styles/media.css" />
+    <link rel="stylesheet" href="./styles/form.css" />
 
     <link
       rel="stylesheet"
@@ -379,6 +380,45 @@
           </div>
         </div>
       </div>
+      <div class="container" id="contact-page">
+        <div class="background">
+          <div class="form">
+            <div class="screen">
+              <div class="screen-body">
+                <div class="screen-body-item left">
+                  <div class="app-title">
+                    <span>CONTACT</span>
+                    <span>ME</span>
+                  </div>
+                </div>
+                <div class="screen-body-item">
+                  <div class="app-form">
+                    <div class="app-form-group">
+                      <input
+                        id="mail"
+                        class="app-form-control"
+                        placeholder="EMAIL"
+                      />
+                    </div>
+
+                    <div class="app-form-group message">
+                      <textarea
+                        id="message"
+                        name="message"
+                        class="app-form-control"
+                        placeholder="MESSAGE"
+                      ></textarea>
+                    </div>
+                    <div class="app-form-group buttons">
+                      <button id="send" class="app-form-button">SEND</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container" id="experience-page">
@@ -520,6 +560,58 @@
       //     document.getElementById('navbar').style.visibility = 'visible';
       //   }
       // });
+      const mailInput = document.getElementById('mail');
+      const messageInput = document.getElementById('message');
+      const sendInput = document.getElementById('send');
+
+      const mailData = {
+        _replyto: '',
+        message: ''
+      };
+      mailInput.addEventListener('change', (e) => {
+        mailData._replyto = e.target.value;
+        fetch('https://formspree.io/f/moqpebej', {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(mailData)
+        }).then((data) => {
+          if (data.status >= 400) {
+            mailInput.style.borderColor = 'red';
+          } else {
+            mailInput.style.borderColor = 'rgba(66, 132, 161, 0.678)';
+          }
+        });
+      });
+
+      messageInput.addEventListener('change', (e) => {
+        mailData.message = e.target.value;
+      });
+
+      sendInput.addEventListener('click', (e) => {
+        fetch('https://formspree.io/f/moqpebej', {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(mailData)
+        }).then((data) => {
+          if (data.status >= 400) {
+            mailInput.style.borderColor = 'red';
+          }
+        });
+      });
     </script>
   </body>
 </html>

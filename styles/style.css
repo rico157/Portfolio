@@ -346,6 +346,14 @@ a:hover {
 
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
 #experience-page .card {
   height: 300px;
   min-width: 300px;
