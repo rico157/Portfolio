@@ -143,11 +143,19 @@ textarea {
     color: #b9134f;
 }
 
+#contact-page.container {
+    width: 95vw;
+}
 
+.screen {
+    width: 100%;
+}
 
 
 
 @media screen and (max-width: 520px) {
+
+
     textarea {
         height: auto;
     }
@@ -174,6 +182,8 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
+
+
     .screen-body {
         padding: 40px;
     }
