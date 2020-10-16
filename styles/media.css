@@ -11,6 +11,19 @@
   }
 }
 
+@keyframes raise-card {
+  from {
+    box-shadow: none;
+    transform: scale(1.01);
+  }
+
+  to {
+    box-shadow: 7px 7px 16px rgba(8, 25, 36, 0.562),
+      -7px -7px 16px rgba(66, 133, 161, 0.452);
+
+  }
+}
+
 @media screen and (max-width: 767px) {
   @media (orientation: landscape) {
     .icons-container {
