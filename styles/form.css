@@ -224,3 +224,13 @@ textarea {
         padding: 0;
     }
 }
+
+@media only screen and (min-width: 1080px) {
+    .screen {
+
+
+        /* width: 750px;
+        height: 450px; */
+
+    }
+}
