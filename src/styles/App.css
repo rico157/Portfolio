@@ -1,14 +1,4 @@
-.nav-a {
-    outline: none;
-    background-color: rgba(31, 68, 74, 0.077);
-    /* Green */
-    border: none;
-    color: white;
-    padding: 0.7%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.4rem;
-    /* border-left: 1px solid rgba(255, 255, 255, 0.336);
-    border-right: 1px solid rgba(255, 255, 255, 0.365); */
+.burger {
+    font-size: 3rem;
+    color: '#ffffff'
 }
