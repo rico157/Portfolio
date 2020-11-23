@@ -4,19 +4,15 @@ import useWindowDimensions from "./hooks/useWindowDimensions";
 import { TiThMenu } from "react-icons/ti";
 import { slide as Menu } from "react-burger-menu";
 
-export default function MyNavBar() {
+export default function MyNavBar({ dim: { phone, tablet } }) {
   const [over, setOver] = useState(false);
-  // const [open, setOpen] = useState(false);
-  const { width } = useWindowDimensions();
-  const phone = width < 450;
-  const tablet = width < 800;
+
   const navStyle = {
+    backgroundImage: "linear-gradient(50deg, #0f4667 0%, #2a6973 150%)",
     paddingTop: phone ? "0" : "1rem",
     paddingBottom: phone ? "0" : "1rem",
     paddingRight: tablet ? "2rem" : "3rem",
-    // backgroundColor: phone && "#0F4667",
     boxShadow:
-      !phone &&
       "7px 7px 16px rgba(8, 25, 36, 0.562), -7px -7px 16px rgba(66, 133, 161, 0.452)"
   };
 
@@ -24,7 +20,6 @@ export default function MyNavBar() {
     outline: "none",
     backgroundColor: "rgba(31, 68, 74, 0.077)",
     border: "none",
-    // color: "#e6e6e6",
     margin: "0.2rem",
     textAlign: "center",
     textDecoration: "none",
@@ -90,8 +85,17 @@ export default function MyNavBar() {
   };
 
   return (
-    <Navbar variant="dark" style={navStyle}>
-      <Navbar.Brand href="#home">R</Navbar.Brand>
+    <Navbar fixed="top" variant="dark" style={navStyle}>
+      <Navbar.Brand
+        href="#home"
+        style={{
+          fontSize: "3rem",
+          fontWeight: 900,
+          lineHeight: phone ? 1.25 : 0
+        }}
+      >
+        R
+      </Navbar.Brand>
       <Nav className="mr-auto"></Nav>
       {phone ? (
         <>
