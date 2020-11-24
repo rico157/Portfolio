@@ -23,7 +23,6 @@ export default function Slides({ dim: { phone, tablet } }) {
     color: "white",
     display: "flex",
     justifyContent: "space-evenly",
-
     borderRadius: "50%",
     margin: phone ? "0.7rem" : "1rem",
 
@@ -33,8 +32,8 @@ export default function Slides({ dim: { phone, tablet } }) {
 
   return (
     <div style={{ margin: "2em" }}>
-      <h2 style={{ color: "white", textAlign: "center" }}>
-        Made with <a href="https://northcoders.com/">Northcoders</a>
+      <h2 style={{ color: "white", textAlign: "center", marginRight: "1rem" }}>
+        Recent projects
       </h2>
 
       <Carousel style={boxStyle}>

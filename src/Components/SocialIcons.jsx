@@ -6,7 +6,7 @@ export default function SocialIcons({ dim: { phone, tablet } }) {
     fontSize: phone ? "2rem" : "4rem",
 
     padding: phone ? "0.7rem 1rem" : "1rem 1.2rem",
-    paddingTop: 0,
+    paddingTop: "0.5rem",
     borderRadius: phone ? "1rem" : "2rem",
     margin: phone ? "0.7rem" : "1rem",
 

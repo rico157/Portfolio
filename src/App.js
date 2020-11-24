@@ -8,6 +8,7 @@ function App() {
   const phone = width < 550;
   const tablet = width < 870;
   const appStyle = {};
+
   return (
     <div className="App" style={appStyle}>
       <NavBar dim={{ phone, tablet }} />
