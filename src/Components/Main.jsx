@@ -59,29 +59,52 @@ export default function Main({ dim: { phone, tablet } }) {
               src={avatar}
               roundedCircle
               style={{
+                marginBottom: tablet && "3em",
                 width: "300px",
                 height: "300px",
                 borderRadius: "50%",
                 border: "3px solid",
-                backgroundColor: "#ffffff99"
+                backgroundColor: "#ffffff99",
+                boxShadow:
+                  "9px 9px 20px rgba(8, 25, 36, 0.562), -9px -9px 20px rgba(66, 133, 161, 0.452)"
               }}
             />
           </div>
           <div className="text" style={textStyle}>
-            <h2 style={{ margin: "1rem", lineHeight: 0 }}>
+            <h2 style={{ margin: 0, marginLeft: "1rem", lineHeight: 1 }}>
               Hi{"  "}
               <span role="img" aria-label="down">
                 👋
               </span>
               , I'm
             </h2>
-            <h1 style={{ margin: "1rem", lineHeight: tablet && 0 }}>
+            <h1
+              style={{
+                margin: 0,
+                marginLeft: "0.9rem",
+                lineHeight: tablet ? 1 : 1
+              }}
+            >
               Riccardo Cogoni
             </h1>
-            <h2 style={{ margin: "1rem", lineHeight: tablet && 0 }}>
+            <h2
+              style={{
+                margin: 0,
+                marginLeft: "1rem",
+                marginTop: "0.7rem",
+                marginBottom: "0.7rem",
+                lineHeight: tablet ? 1 : 1
+              }}
+            >
               Software Developer
             </h2>
-            <p style={{ margin: "1rem", lineHeight: tablet && 1 }}>
+            <p
+              style={{
+                margin: 0,
+                marginLeft: "1rem",
+                lineHeight: tablet ? 1 : 1
+              }}
+            >
               Motivated, personable Software Developer who loves to learn and
               creatively solve problems.Ambitious and excited to work on new
               projects and other challenging opportunities.
@@ -96,13 +119,22 @@ export default function Main({ dim: { phone, tablet } }) {
         style={{
           marginTop: "10em",
           display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
+          flexDirection: "column",
           maxWidth: "100vw"
         }}
       >
-        <Slides dim={{ phone, tablet }} />
-        <PersonalSlides dim={{ phone, tablet }} />
+        <h2 style={{ color: "white", textAlign: "center" }}>Recent projects</h2>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            maxWidth: "100vw"
+          }}
+        >
+          <Slides dim={{ phone, tablet }} />
+          <PersonalSlides dim={{ phone, tablet }} />
+        </div>
       </div>
     </div>
   );

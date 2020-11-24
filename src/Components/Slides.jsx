@@ -33,15 +33,11 @@ export default function Slides({ dim: { phone, tablet } }) {
 
   return (
     <div style={{ margin: "2em" }}>
-      <h2 style={{ color: "white", textAlign: "center" }}>
-        Made with <a href="https://northcoders.com/">Northcoders</a>
-      </h2>
-
       <Carousel style={boxStyle}>
         <Carousel.Item interval={3000} style={backgroundOverlay}>
           <Image
             style={{
-              borderRadius: !tablet && "0.5em",
+              borderRadius: !tablet && "1em",
               opacity: 0.3
             }}
             className="d-block w-100"
@@ -75,6 +71,9 @@ export default function Slides({ dim: { phone, tablet } }) {
             </a>
           </div>
           <Carousel.Caption>
+            <h4 style={{ margin: 0 }}>
+              Made with <a href="https://northcoders.com/">Northcoders</a>
+            </h4>
             <h2 style={{ margin: 0 }}>Mobile App</h2>
             <p style={{ margin: 0, fontSize: phone && "0.8rem" }}>
               TripAdvisor inspired app
@@ -87,7 +86,7 @@ export default function Slides({ dim: { phone, tablet } }) {
         <Carousel.Item interval={3000} style={backgroundOverlay}>
           <Image
             style={{
-              borderRadius: !tablet && "0.5em",
+              borderRadius: !tablet && "1em",
               opacity: 0.3
             }}
             className="d-block w-100"
@@ -114,6 +113,9 @@ export default function Slides({ dim: { phone, tablet } }) {
             </a>
           </div>
           <Carousel.Caption>
+            <h4 style={{ margin: 0 }}>
+              Made with <a href="https://northcoders.com/">Northcoders</a>
+            </h4>
             <h2>React App</h2>
             <p style={{ margin: 0 }}>News aggregator app</p>
             <p>React / PostgreSQL / Express.js</p>
@@ -122,7 +124,7 @@ export default function Slides({ dim: { phone, tablet } }) {
         <Carousel.Item interval={3000} style={backgroundOverlay}>
           <Image
             style={{
-              borderRadius: !tablet && "0.5em",
+              borderRadius: !tablet && "1em",
               opacity: 0.3
             }}
             className="d-block w-100"
@@ -149,6 +151,9 @@ export default function Slides({ dim: { phone, tablet } }) {
             </a>
           </div>
           <Carousel.Caption>
+            <h4 style={{ margin: 0 }}>
+              Made with <a href="https://northcoders.com/">Northcoders</a>
+            </h4>
             <h2>RESTful API</h2>
             <p style={{ margin: 0 }}>News aggregator API</p>
             <p>PostgreSQL / Express.js / Jest</p>

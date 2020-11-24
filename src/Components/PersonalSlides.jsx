@@ -32,10 +32,6 @@ export default function Slides({ dim: { phone, tablet } }) {
 
   return (
     <div style={{ margin: "2em" }}>
-      <h2 style={{ color: "white", textAlign: "center", marginRight: "1rem" }}>
-        Recent projects
-      </h2>
-
       <Carousel style={boxStyle}>
         <Carousel.Item interval={3000} style={backgroundOverlay}>
           <Image
