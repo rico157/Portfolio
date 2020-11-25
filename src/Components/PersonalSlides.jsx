@@ -6,7 +6,7 @@ import reactPic from "../assets/react.jpeg";
 import restapi from "../assets/restapi.jpeg";
 import { FaGithub, FaMobile, FaGlobe } from "react-icons/fa";
 
-export default function Slides({ dim: { phone, tablet } }) {
+export default function Slides({ dim: { phone, tablet, desktop } }) {
   const backgroundOverlay = {
     height: "100%",
     width: "100%",
@@ -14,10 +14,12 @@ export default function Slides({ dim: { phone, tablet } }) {
     borderRadius: !tablet && "0.5em"
   };
   const boxStyle = {
-    minWidth: tablet ? "100vw" : "400px",
     maxWidth: tablet ? "100vw" : "500px",
+    minWidth: tablet ? "100vw" : "500px"
+    // minWidth: tablet && "100vw"
+    // minWidth: tablet ? "100vw" : "200px"
     // minHeight: phone ? "400px" : "350px",
-    marginRight: !tablet && "1rem"
+    // marginRight: !tablet && "1rem"
   };
   const iconStyle = {
     color: "white",
@@ -31,9 +33,18 @@ export default function Slides({ dim: { phone, tablet } }) {
   };
 
   return (
-    <div style={{ margin: "2em" }}>
+    <div
+      style={{
+        margin:
+          phone || tablet
+            ? "2em 0 2em 0 "
+            : desktop
+            ? "2em 5em 2em 5em "
+            : "2em 2em 2em 1em "
+      }}
+    >
       <Carousel style={boxStyle}>
-        <Carousel.Item interval={3000} style={backgroundOverlay}>
+        <Carousel.Item interval={5000} style={backgroundOverlay}>
           <Image
             style={{
               borderRadius: !tablet && "0.5em",
@@ -79,7 +90,7 @@ export default function Slides({ dim: { phone, tablet } }) {
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={3000} style={backgroundOverlay}>
+        <Carousel.Item interval={5000} style={backgroundOverlay}>
           <Image
             style={{
               borderRadius: !tablet && "0.5em",
@@ -114,7 +125,7 @@ export default function Slides({ dim: { phone, tablet } }) {
             <p>React / PostgreSQL / Express.js</p>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item interval={3000} style={backgroundOverlay}>
+        <Carousel.Item interval={5000} style={backgroundOverlay}>
           <Image
             style={{
               borderRadius: !tablet && "0.5em",

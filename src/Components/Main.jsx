@@ -5,8 +5,9 @@ import Slides from "./Slides";
 import PersonalSlides from "./PersonalSlides";
 import avatar from "../assets/avatar.png";
 import { Image } from "react-bootstrap";
+import ProjectList from "./ProjectList";
 
-export default function Main({ dim: { phone, tablet } }) {
+export default function Main({ dim: { phone, tablet, desktop } }) {
   const mainStyle = {
     display: "flex",
     flexDirection: "column",
@@ -118,23 +119,34 @@ export default function Main({ dim: { phone, tablet } }) {
       <div
         style={{
           marginTop: "10em",
+          marginLeft: !tablet && "3em",
+          marginRight: !tablet && "3em",
           display: "flex",
           flexDirection: "column",
-          maxWidth: "100vw"
+          alignItems: "center",
+          // maxWidth: "fit-content",
+          backgroundColor: "#00000077",
+          borderRadius: "1em",
+          height: "fit-content"
+          // padding: "2em"
         }}
       >
-        <h2 style={{ color: "white", textAlign: "center" }}>Recent projects</h2>
+        <h2 style={{ color: "white", textAlign: "center", marginTop: "1em" }}>
+          Recent projects
+        </h2>
         <div
           style={{
             display: "flex",
-            flexWrap: "wrap",
+            // flexWrap: "wrap",
+            flexDirection: desktop ? "column" : "row",
             justifyContent: "center",
             maxWidth: "100vw"
           }}
         >
-          <Slides dim={{ phone, tablet }} />
-          <PersonalSlides dim={{ phone, tablet }} />
+          <Slides dim={{ phone, tablet, desktop }} />
+          <PersonalSlides dim={{ phone, tablet, desktop }} />
         </div>
+        <ProjectList dim={{ phone, tablet, desktop }} />
       </div>
     </div>
   );
