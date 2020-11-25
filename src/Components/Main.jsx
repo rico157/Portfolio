@@ -1,6 +1,6 @@
 import React from "react";
 import SocialIcons from "./SocialIcons";
-import BottomPage from "./BottomPage";
+// import BottomPage from "./BottomPage";
 import Slides from "./Slides";
 import PersonalSlides from "./PersonalSlides";
 import avatar from "../assets/avatar.png";

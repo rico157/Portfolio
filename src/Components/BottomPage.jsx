@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, NavbarBrand } from "react-bootstrap";
+// import { Container, Navbar, NavbarBrand } from "react-bootstrap";
 
 export default function BottomNavbar({ children, dim: { phone, tablet } }) {
   const footerStyle = {

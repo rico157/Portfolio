@@ -1,12 +1,7 @@
-import React, { useState } from "react";
 import { Button, Nav, Navbar } from "react-bootstrap";
-import useWindowDimensions from "./hooks/useWindowDimensions";
-import { TiThMenu } from "react-icons/ti";
 import { slide as Menu } from "react-burger-menu";
 
 export default function MyNavBar({ dim: { phone, tablet } }) {
-  const [over, setOver] = useState(false);
-
   const navStyle = {
     backgroundImage: "linear-gradient(50deg, #0f4667 0%, #2a6973 150%)",
     paddingTop: phone ? "0" : "1rem",
@@ -116,12 +111,7 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
         </>
       ) : (
         <Nav>
-          <Nav.Link
-            style={linkStyle}
-            href="#home"
-            onMouseEnter={() => setOver(true)}
-            onMouseLeave={() => setOver(false)}
-          >
+          <Nav.Link style={linkStyle} href="#home">
             HOME
           </Nav.Link>
           <Nav.Link style={linkStyle} href="#portfolio">

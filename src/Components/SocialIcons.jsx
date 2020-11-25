@@ -15,13 +15,13 @@ export default function SocialIcons({ dim: { phone, tablet } }) {
   };
   return (
     <div>
-      <a href="" style={iconStyle}>
+      <a href="#home" style={iconStyle}>
         <FaGithub />
       </a>
-      <a href="" style={iconStyle}>
+      <a href="#home" style={iconStyle}>
         <FaTwitter />
       </a>
-      <a href="" style={iconStyle}>
+      <a href="#home" style={iconStyle}>
         <FaLinkedinIn />
       </a>
     </div>

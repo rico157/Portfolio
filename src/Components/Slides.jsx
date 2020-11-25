@@ -67,7 +67,7 @@ export default function Slides({ dim: { phone, tablet, desktop } }) {
             }}
           >
             <a
-              href=""
+              href="#home"
               style={{
                 ...iconStyle,
                 borderRadius: "100%",
@@ -76,7 +76,7 @@ export default function Slides({ dim: { phone, tablet, desktop } }) {
             >
               <FaMobile />
             </a>
-            <a href="" style={iconStyle}>
+            <a href="#home" style={iconStyle}>
               <FaGithub />
             </a>
           </div>
@@ -115,10 +115,10 @@ export default function Slides({ dim: { phone, tablet, desktop } }) {
               display: "flex"
             }}
           >
-            <a href="" style={iconStyle}>
+            <a href="#home" style={iconStyle}>
               <FaGlobe />
             </a>
-            <a href="" style={iconStyle}>
+            <a href="#home" style={iconStyle}>
               <FaGithub />
             </a>
           </div>
@@ -153,10 +153,10 @@ export default function Slides({ dim: { phone, tablet, desktop } }) {
               display: "flex"
             }}
           >
-            <a href="" style={iconStyle}>
+            <a href="#home" style={iconStyle}>
               <FaGlobe />
             </a>
-            <a href="" style={iconStyle}>
+            <a href="#home" style={iconStyle}>
               <FaGithub />
             </a>
           </div>
