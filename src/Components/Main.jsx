@@ -123,30 +123,33 @@ export default function Main({ dim: { phone, tablet, desktop } }) {
           marginRight: !tablet && "3em",
           display: "flex",
           flexDirection: "column",
+          justifyContent: "center",
           alignItems: "center",
           // maxWidth: "fit-content",
           backgroundColor: "#00000077",
           borderRadius: "1em",
-          height: "fit-content"
+          height: "fit-content",
+          width: phone ? "100%" : tablet ? "90%" : desktop ? "90%" : "80%"
           // padding: "2em"
         }}
       >
         <h2 style={{ color: "white", textAlign: "center", marginTop: "1em" }}>
           Recent projects
         </h2>
-        <div
+        {/* <div
           style={{
             display: "flex",
-            // flexWrap: "wrap",
+            flexWrap: "wrap",
             flexDirection: desktop ? "column" : "row",
-            justifyContent: "center",
+            justifyContent: "flex-end",
+            alignItems: "flex-end",
             maxWidth: "100vw"
           }}
         >
           <Slides dim={{ phone, tablet, desktop }} />
           <PersonalSlides dim={{ phone, tablet, desktop }} />
-        </div>
-        <ProjectList dim={{ phone, tablet, desktop }} />
+        </div> */}
+        {/* <ProjectList dim={{ phone, tablet, desktop }} /> */}
       </div>
     </div>
   );

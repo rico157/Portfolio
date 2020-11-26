@@ -4,8 +4,9 @@ import restapi from "../assets/restapi.jpeg";
 
 export default function ProjectList({ dim: { phone, tablet, desktop } }) {
   const cardStyle = {
-    padding: phone || tablet ? 0 : desktop ? "2em 5em 2em 5em" : "2em",
-    // backgroundColor: "black",
+    padding:
+      phone || tablet ? "2em 2em 2em 2em" : desktop ? "2em 5em 2em 5em" : "5em",
+    backgroundColor: "black",
     width: "100%"
   };
 
@@ -15,21 +16,37 @@ export default function ProjectList({ dim: { phone, tablet, desktop } }) {
 
     borderRadius: phone || tablet ? 0 : "0.5em",
     width: "100%",
-    height: phone || tablet ? "40em" : desktop ? "40em" : "15em",
+    height: phone || tablet ? "10em" : desktop ? "15em" : "15em",
     // height: "100%",
     marginTop: "2em",
     display: "flex",
     color: "white"
   };
 
+  const title = {
+    fontSize: "3em",
+    lineHeight: 1,
+    margin: 0
+  };
+  const subTitle = {
+    fontSize: "2em",
+    lineHeight: 1,
+    margin: 0
+  };
+  const paragraph = {
+    fontSize: "1.5em",
+    lineHeight: 1,
+    margin: 0
+  };
+
   return (
     <div style={cardStyle}>
       <div style={containerStyle}>
-        <Image src={restapi} style={{ height: "100%" }} />
-        <div>
-          <h3>title</h3>
-          <h4>title</h4>
-          <p>paragraph</p>
+        <Image src={restapi} style={{ height: "100%" }} className="h-100" />
+        <div style={{ marginLeft: "2em" }}>
+          <h3 style={title}>title</h3>
+          <h4 style={subTitle}>title</h4>
+          <p style={paragraph}>paragraph</p>
         </div>
       </div>
       <div style={containerStyle}>

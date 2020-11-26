@@ -15,7 +15,7 @@ export default function Slides({ dim: { phone, tablet, desktop } }) {
   };
   const boxStyle = {
     // minWidth: tablet && "100vw"
-    maxWidth: tablet ? "100vw" : "500px",
+    maxWidth: tablet ? "100vw" : "80%",
     minWidth: tablet ? "100vw" : "500px"
     // minHeight: phone ? "400px" : "350px",
     // marginRight: !tablet && "1rem"
@@ -40,7 +40,7 @@ export default function Slides({ dim: { phone, tablet, desktop } }) {
             ? "2em 0 2em 0 "
             : desktop
             ? "2em 5em 2em 5em "
-            : "2em 1em 2em 2em "
+            : "2em 2em 2em 2em "
       }}
     >
       <Carousel style={boxStyle}>

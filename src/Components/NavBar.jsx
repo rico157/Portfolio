@@ -91,7 +91,7 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
       >
         R
       </Navbar.Brand>
-      <Nav className="mr-auto"></Nav>
+      <Nav className="mr-auto" activeKey="/"></Nav>
       {phone ? (
         <>
           <Menu right width={80} styles={styles}>
@@ -111,7 +111,7 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
         </>
       ) : (
         <Nav>
-          <Nav.Link style={linkStyle} href="#home">
+          <Nav.Link style={linkStyle} href="/">
             HOME
           </Nav.Link>
           <Nav.Link style={linkStyle} href="#portfolio">
