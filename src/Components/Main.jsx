@@ -1,4 +1,5 @@
 import React from "react";
+import ReactFullpage from "@fullpage/react-fullpage";
 
 // Images
 import avatar from "../assets/avatar.png";
@@ -7,16 +8,13 @@ import matesrates from "../assets/matesrates.jpg";
 import ds from "../assets/ds.png";
 
 // Packages
-import Fullpage, {
-  FullPageSections,
-  FullpageSection
-} from "@ap.cx/react-fullpage";
+
 import { Image } from "react-bootstrap";
 
 // Components
 import Footer from "./Footer";
 import SocialIcons from "./SocialIcons";
-import ContactForm from "./ContactForm";
+import ContactForm from "./SimpleForm";
 
 export default function Main({
   dim: { phone, smPhone, tablet, desktop, portrait }
@@ -137,234 +135,250 @@ export default function Main({
   };
 
   return (
-    <Fullpage>
-      <div style={mainStyle}>
-        <FullPageSections>
-          {/* Main */}
-          <FullpageSection style={sectionStyle}>
-            <div
-              style={screenStyle}
-              className={
-                phone ? "topCol" : tablet && portrait ? "spaceCol" : "centerRow"
-              }
-            >
-              <div style={imageContainer}>
-                <Image src={avatar} roundedCircle style={avatarStyle} />
-              </div>
-              <div style={infoContainerStyle}>
-                <div className="text" style={textStyle}>
-                  <h3 style={headTitleStyle}>
-                    Hi{" "}
-                    <span role="img" aria-label="down">
-                      👋{" "}
-                    </span>
-                    , I'm
-                  </h3>
-                  <h2 style={secTitleStyle}>Riccardo Cogoni</h2>
-                  <h3 style={subTitleStyle}>Software Developer</h3>
-                  <p style={paragraphStyle}>
-                    Motivated, personable Software Developer who loves to learn
-                    and creatively solve problems.Ambitious and excited to work
-                    on new projects and other challenging opportunities.
-                  </p>
-                  {/* <SocialIcons dim={{ phone, tablet }} /> */}
+    <ReactFullpage
+      licenseKey={"YOUR_KEY_HERE"}
+      scrollingSpeed={300}
+      render={({ state, fullpageApi }) => {
+        return (
+          <div style={mainStyle}>
+            <ReactFullpage.Wrapper>
+              {" "}
+              {/* Main */}
+              <div style={sectionStyle} className="section">
+                <div
+                  style={screenStyle}
+                  className={
+                    phone
+                      ? "topCol"
+                      : tablet && portrait
+                      ? "spaceCol"
+                      : "centerRow"
+                  }
+                >
+                  <div style={imageContainer}>
+                    <Image src={avatar} roundedCircle style={avatarStyle} />
+                  </div>
+                  <div style={infoContainerStyle}>
+                    <div className="text" style={textStyle}>
+                      <h3 style={headTitleStyle}>
+                        Hi{" "}
+                        <span role="img" aria-label="down">
+                          👋{" "}
+                        </span>
+                        , I'm
+                      </h3>
+                      <h2 style={secTitleStyle}>Riccardo Cogoni</h2>
+                      <h3 style={subTitleStyle}>Software Developer</h3>
+                      <p style={paragraphStyle}>
+                        Motivated, personable Software Developer who loves to
+                        learn and creatively solve problems.Ambitious and
+                        excited to work on new projects and other challenging
+                        opportunities.
+                      </p>
+                      {/* <SocialIcons dim={{ phone, tablet }} /> */}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </FullpageSection>
-
-          {/* Project 1 */}
-          <FullpageSection style={sectionStyle}>
-            <div
-              style={secScreenStyle}
-              className={
-                phone ? "topCol" : tablet && portrait ? "spaceCol" : "centerRow"
-              }
-            >
-              <div style={imageContainer}>
-                <Image src={ds} style={imageStyle} />
-              </div>
-              <div style={infoContainerStyle}>
-                <div className="text" style={textStyle}>
-                  <h3 style={headTitleStyle}>Currently workin on...</h3>
-                  <h2 style={secTitleStyle}>Desktop Switcher</h2>
-                  <h3
-                    style={{
-                      margin: "0.7rem 0 0.7rem 1rem",
-                      lineHeight: 1
-                    }}
-                  >
-                    Electron • Express • NodeJS
-                  </h3>
-                  <p
-                    style={{
-                      margin: 0,
-                      marginLeft: "1rem",
-                      lineHeight: tablet ? 1.2 : 1
-                    }}
-                  >
-                    Full-Stack social news aggregation, web content rating, and
-                    discussion web application developed with React, PostgreSQL
-                    and NodeJS.
-                  </p>
+              {/* Project 1 */}
+              <div style={sectionStyle} className="section">
+                <div
+                  style={secScreenStyle}
+                  className={
+                    phone
+                      ? "topCol"
+                      : tablet && portrait
+                      ? "spaceCol"
+                      : "centerRow"
+                  }
+                >
+                  <div style={imageContainer}>
+                    <Image src={ds} style={imageStyle} />
+                  </div>
+                  <div style={infoContainerStyle}>
+                    <div className="text" style={textStyle}>
+                      <h3 style={headTitleStyle}>Currently workin on...</h3>
+                      <h2 style={secTitleStyle}>Desktop Switcher</h2>
+                      <h3
+                        style={{
+                          margin: "0.7rem 0 0.7rem 1rem",
+                          lineHeight: 1
+                        }}
+                      >
+                        Electron • Express • NodeJS
+                      </h3>
+                      <p
+                        style={{
+                          margin: 0,
+                          marginLeft: "1rem",
+                          lineHeight: tablet ? 1.2 : 1
+                        }}
+                      >
+                        Full-Stack social news aggregation, web content rating,
+                        and discussion web application developed with React,
+                        PostgreSQL and NodeJS.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </FullpageSection>
-
-          {/* Project 2 */}
-          <FullpageSection style={sectionStyle}>
-            <div
-              style={secScreenStyle}
-              className={
-                phone
-                  ? "topCol reverse flex-end"
-                  : tablet && portrait
-                  ? "spaceCol reverse"
-                  : "centerRow"
-              }
-            >
-              <div style={infoContainerStyle}>
-                <div className="text" style={leftTextStyle}>
-                  <h3
+              {/* Project 2 */}
+              <div style={sectionStyle} className="section">
+                <div
+                  style={secScreenStyle}
+                  className={
+                    phone
+                      ? "topCol reverse flex-end"
+                      : tablet && portrait
+                      ? "spaceCol reverse"
+                      : "centerRow"
+                  }
+                >
+                  <div style={infoContainerStyle}>
+                    <div className="text" style={leftTextStyle}>
+                      <h3
+                        style={{
+                          ...headTitleStyle,
+                          marginLeft: tablet && "1rem",
+                          marginRight: !phone && "1rem"
+                        }}
+                      >
+                        Made with Northcoders
+                      </h3>
+                      <h2
+                        style={{
+                          ...secTitleStyle,
+                          marginRight: "0.9rem",
+                          marginLeft: tablet && "0.9rem"
+                        }}
+                      >
+                        Mates Rates
+                      </h2>
+                      <h3
+                        style={{
+                          margin: "0.7rem 1rem 0.7rem",
+                          marginLeft: tablet && "1rem",
+                          lineHeight: tablet ? 1 : 1
+                        }}
+                      >
+                        React Native • MongoDB • GraphQL
+                      </h3>
+                      <p
+                        style={{
+                          margin: "0 1rem",
+                          lineHeight: tablet ? 1.2 : 1,
+                          marginLeft: tablet && "1rem"
+                        }}
+                      >
+                        Full-Stack social news aggregation, web content rating,
+                        and discussion web application developed with React,
+                        PostgreSQL and NodeJS.
+                      </p>
+                    </div>
+                  </div>
+                  <div
                     style={{
-                      ...headTitleStyle,
-                      marginLeft: tablet && "1rem",
-                      marginRight: !phone && "1rem"
+                      ...imageContainer,
+                      marginLeft: !phone && tablet && "0em",
+                      marginRight: !phone && tablet && "2em"
                     }}
                   >
-                    Made with Northcoders
-                  </h3>
-                  <h2
-                    style={{
-                      ...secTitleStyle,
-                      marginRight: "0.9rem",
-                      marginLeft: tablet && "0.9rem"
-                    }}
-                  >
-                    Mates Rates
-                  </h2>
-                  <h3
-                    style={{
-                      margin: "0.7rem 1rem 0.7rem",
-                      marginLeft: tablet && "1rem",
-                      lineHeight: tablet ? 1 : 1
-                    }}
-                  >
-                    React Native • MongoDB • GraphQL
-                  </h3>
-                  <p
-                    style={{
-                      margin: "0 1rem",
-                      lineHeight: tablet ? 1.2 : 1,
-                      marginLeft: tablet && "1rem"
-                    }}
-                  >
-                    Full-Stack social news aggregation, web content rating, and
-                    discussion web application developed with React, PostgreSQL
-                    and NodeJS.
-                  </p>
+                    <Image src={matesrates} style={imageStyle} />
+                  </div>
                 </div>
               </div>
-              <div
-                style={{
-                  ...imageContainer,
-                  marginLeft: !phone && tablet && "0em",
-                  marginRight: !phone && tablet && "2em"
-                }}
-              >
-                <Image src={matesrates} style={imageStyle} />
-              </div>
-            </div>
-          </FullpageSection>
-
-          {/* Project 3 */}
-          <FullpageSection style={sectionStyle}>
-            <div
-              style={secScreenStyle}
-              className={
-                phone ? "topCol" : tablet && portrait ? "spaceCol" : "centerRow"
-              }
-            >
-              <div style={imageContainer}>
-                <Image src={news} style={imageStyle} />
-              </div>
-              <div style={infoContainerStyle}>
-                <div className="text" style={textStyle}>
-                  <h3 style={{ margin: 0, marginLeft: "1rem", lineHeight: 1 }}>
-                    Made with Northcoders
-                  </h3>
-                  <h2 style={secTitleStyle}>Rico Fake News</h2>
-                  <h3
-                    style={{
-                      margin: 0,
-                      marginLeft: "1rem",
-                      marginTop: "0.7rem",
-                      marginBottom: "0.7rem",
-                      lineHeight: tablet ? 1 : 1
-                    }}
-                  >
-                    React • PostgreSQL • NodeJS
-                  </h3>
-                  <p
-                    style={{
-                      margin: 0,
-                      marginLeft: "1rem",
-                      lineHeight: tablet ? 1.2 : 1
-                    }}
-                  >
-                    Full-Stack social news aggregation, web content rating, and
-                    discussion web application developed with React, PostgreSQL
-                    and NodeJS.
-                  </p>
+              {/* Project 3 */}
+              <div style={sectionStyle} className="section">
+                <div
+                  style={secScreenStyle}
+                  className={
+                    phone
+                      ? "topCol"
+                      : tablet && portrait
+                      ? "spaceCol"
+                      : "centerRow"
+                  }
+                >
+                  <div style={imageContainer}>
+                    <Image src={news} style={imageStyle} />
+                  </div>
+                  <div style={infoContainerStyle}>
+                    <div className="text" style={textStyle}>
+                      <h3
+                        style={{ margin: 0, marginLeft: "1rem", lineHeight: 1 }}
+                      >
+                        Made with Northcoders
+                      </h3>
+                      <h2 style={secTitleStyle}>Rico Fake News</h2>
+                      <h3
+                        style={{
+                          margin: 0,
+                          marginLeft: "1rem",
+                          marginTop: "0.7rem",
+                          marginBottom: "0.7rem",
+                          lineHeight: tablet ? 1 : 1
+                        }}
+                      >
+                        React • PostgreSQL • NodeJS
+                      </h3>
+                      <p
+                        style={{
+                          margin: 0,
+                          marginLeft: "1rem",
+                          lineHeight: tablet ? 1.2 : 1
+                        }}
+                      >
+                        Full-Stack social news aggregation, web content rating,
+                        and discussion web application developed with React,
+                        PostgreSQL and NodeJS.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </FullpageSection>
-
-          {/* Contact Form */}
-          <FullpageSection style={sectionStyle}>
-            <div
-              id="#contact"
-              style={secScreenStyle}
-              className={
-                phone
-                  ? "topCol flex-end"
-                  : tablet && portrait
-                  ? "spaceCol reverse"
-                  : "centerRow"
-              }
-            >
-              <div style={infoContainerStyle}>
-                <div className="text" style={leftTextStyle}>
-                  <h3
-                    style={{
-                      ...headTitleStyle,
-                      marginLeft: tablet && "1rem",
-                      marginRight: !phone && "1rem"
-                    }}
-                  >
-                    Want to
-                  </h3>
-                  <h2
-                    style={{
-                      ...secTitleStyle,
-                      marginRight: "0.9rem",
-                      marginLeft: tablet && "0.9rem"
-                    }}
-                  >
-                    Say Hi 🙋?
-                  </h2>
-                  <h3
-                    style={{
-                      margin: "0.7rem 1rem 0.7rem",
-                      marginLeft: tablet && "1rem",
-                      lineHeight: tablet ? 1 : 1
-                    }}
-                  >
-                    Leave a message and I'll be back to you as soon as possible!
-                  </h3>
-                  {/* <p
+              {/* Contact Form */}
+              <div style={sectionStyle} className="section">
+                <div
+                  style={secScreenStyle}
+                  className={
+                    phone
+                      ? "topCol flex-end"
+                      : tablet && portrait
+                      ? "spaceCol reverse"
+                      : "centerRow"
+                  }
+                >
+                  <div style={infoContainerStyle}>
+                    <div className="text" style={leftTextStyle}>
+                      <h3
+                        style={{
+                          ...headTitleStyle,
+                          marginLeft: tablet && "1rem",
+                          marginRight: !phone && "1rem"
+                        }}
+                      >
+                        Want to
+                      </h3>
+                      <h2
+                        style={{
+                          ...secTitleStyle,
+                          marginRight: "0.9rem",
+                          marginLeft: tablet && "0.9rem"
+                        }}
+                      >
+                        Say Hi 🙋?
+                      </h2>
+                      <h3
+                        style={{
+                          margin: "0.7rem 1rem 0.7rem",
+                          marginLeft: tablet && "1rem",
+                          lineHeight: tablet ? 1 : 1
+                        }}
+                      >
+                        Leave a message and I'll be back to you as soon as
+                        possible!
+                      </h3>
+                      {/* <p
                     style={{
                       margin: "0 1rem",
                       lineHeight: tablet ? 1.2 : 1,
@@ -375,26 +389,27 @@ export default function Main({
                     discussion web application developed with React, PostgreSQL
                     and NodeJS.
                   </p> */}
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      ...formContainer,
+                      marginLeft: !phone && tablet && "0em",
+                      marginRight: !phone && tablet && "2em"
+                    }}
+                  >
+                    <ContactForm />
+                  </div>
                 </div>
               </div>
-              <div
-                style={{
-                  ...formContainer,
-                  marginLeft: !phone && tablet && "0em",
-                  marginRight: !phone && tablet && "2em"
-                }}
-              >
-                <ContactForm />
+              {/* Footer */}
+              <div style={sectionStyle} className="section">
+                <Footer />
               </div>
-            </div>
-          </FullpageSection>
-
-          {/* Footer */}
-          <FullpageSection style={sectionStyle}>
-            <Footer />
-          </FullpageSection>
-        </FullPageSections>
-      </div>
-    </Fullpage>
+            </ReactFullpage.Wrapper>
+          </div>
+        );
+      }}
+    />
   );
 }
