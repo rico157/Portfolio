@@ -10,6 +10,36 @@
     align-items: center;
 }
 
+.topCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-end {
+    justify-content: flex-end !important;
+
+}
+
+.reverse {
+    flex-direction: column-reverse !important;
+}
+
+.centerRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow {
+    box-shadow: 17px 17px 16px rgb(29, 29, 29),
+        -17px -17px 16px rgb(157, 157, 157)s;
+}
+
+
+
 .icon:hover {
     animation: raise-container 0.5s;
 }

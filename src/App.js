@@ -9,6 +9,7 @@ function App() {
 
   const sizes = {
     phone: width < 550,
+    smPhone: width < 550 && height < 800,
     tablet: width < 870,
     desktop: width < 1100,
     portrait: width < height
@@ -20,7 +21,7 @@ function App() {
     <div className="App" style={appStyle}>
       <NavBar dim={{ ...sizes }} />
       <Main dim={{ ...sizes }} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
