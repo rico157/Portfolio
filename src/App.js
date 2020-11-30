@@ -1,20 +1,25 @@
 import Main from "./Components/Main";
 import NavBar from "./Components/NavBar";
 import useWindowDimensions from "./Components/hooks/useWindowDimensions";
-import "./styles/App.css";
 import Footer from "./Components/Footer";
+import "./styles/App.css";
 
 function App() {
-  const { width } = useWindowDimensions();
-  const phone = width < 550;
-  const tablet = width < 870;
-  const desktop = width < 1100;
+  const { width, height } = useWindowDimensions();
+
+  const sizes = {
+    phone: width < 550,
+    tablet: width < 870,
+    desktop: width < 1100,
+    portrait: width < height
+  };
+
   const appStyle = {};
 
   return (
     <div className="App" style={appStyle}>
-      <NavBar dim={{ phone, tablet }} />
-      <Main dim={{ phone, tablet, desktop }} />
+      <NavBar dim={{ ...sizes }} />
+      <Main dim={{ ...sizes }} />
       <Footer />
     </div>
   );
