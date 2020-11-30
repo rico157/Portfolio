@@ -17,15 +17,21 @@ export default class MyForm extends React.Component {
         onSubmit={this.submitForm}
         action="https://formspree.io/f/moqpebej"
         method="POST"
-        style={{ maxWidth: "100%", padding: "2em" }}
+        style={{ width: "100%", padding: "3em" }}
       >
         <div className="form-group">
           <label>Email:</label>
-          <input type="email" name="email" className="form-control" />
+          <input
+            type="email"
+            name="email"
+            className="form-control"
+            style={{ borderRadius: "3em" }}
+          />
         </div>
         <div className="form-group">
           <label>Message:</label>
           <textarea
+            style={{ borderRadius: "2em" }}
             rows="5"
             type="text"
             name="message"
