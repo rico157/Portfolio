@@ -1,12 +1,22 @@
-.burger {
-    font-size: 3rem;
-    color: #00000030;
+.main-button {
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 1em 0.2rem 1em;
+
 }
 
 .centerCol {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.spaceCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -35,16 +45,37 @@
 
 .shadow {
     box-shadow: 17px 17px 16px rgb(29, 29, 29),
-        -17px -17px 16px rgb(157, 157, 157)s;
+        -17px -17px 16px rgb(157, 157, 157);
+}
+
+.nav-shadow {
+    box-shadow: 7px 7px 16px rgba(29, 29, 29), -7px -7px 16px rgba(157, 157, 157);
 }
 
 
 
 .icon:hover {
-    animation: raise-container 0.5s;
+    animation: raise-container 1s;
 }
 
 @keyframes raise-container {
+    0% {
+        box-shadow: none;
+        transform: scale(1.8);
+    }
+
+    70% {
+        box-shadow: 7px 7px 16px rgba(29, 29, 29), -7px -7px 16px rgba(29, 29, 29);
+        /* transform: scale(2); */
+    }
+
+    100% {
+        box-shadow: none;
+        transform: scale(1.8);
+    }
+}
+
+@keyframes original-raise-container {
     from {
         box-shadow: none;
         transform: scale(1.8);
