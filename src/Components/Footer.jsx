@@ -3,7 +3,7 @@ import { Button, Nav, Navbar } from "react-bootstrap";
 
 export default function Footer() {
   const footer = {
-    boxShadow: "inset 15px 15px 20px rgba(8, 25, 36, 0.562)"
+    // boxShadow: "inset 15px 15px 20px rgba(8, 25, 36, 0.562)"
   };
 
   const textStyle = {};

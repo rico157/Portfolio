@@ -1,7 +1,6 @@
 import Main from "./Components/Main";
 import NavBar from "./Components/NavBar";
 import useWindowDimensions from "./Components/hooks/useWindowDimensions";
-import Footer from "./Components/Footer";
 import "./styles/App.css";
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
     <div className="App" style={appStyle}>
       <NavBar dim={{ ...sizes }} />
       <Main dim={{ ...sizes }} />
-      {/* <Footer /> */}
     </div>
   );
 }

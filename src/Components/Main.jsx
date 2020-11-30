@@ -1,26 +1,25 @@
 import React from "react";
-import SocialIcons from "./SocialIcons";
-import avatar from "../assets/avatar.png";
-import { Image } from "react-bootstrap";
 
+// Images
+import avatar from "../assets/avatar.png";
 import news from "../assets/news.jpg";
 import matesrates from "../assets/matesrates.jpg";
 import ds from "../assets/ds.png";
 
+// Packages
 import Fullpage, {
   FullPageSections,
   FullpageSection
 } from "@ap.cx/react-fullpage";
-import Footer from "./Footer";
+import { Image } from "react-bootstrap";
 
-// import BottomPage from "./BottomPage";
-// import Slides from "./Slides";
-// import PersonalSlides from "./PersonalSlides";
-// import ProjectList from "./ProjectList";
+// Components
+import Footer from "./Footer";
 
 export default function Main({
   dim: { phone, smPhone, tablet, desktop, portrait }
 }) {
+  // Styles
   const mainStyle = {
     display: "flex",
     flexDirection: "column",
@@ -32,21 +31,7 @@ export default function Main({
   const screenStyle = {
     height: "100vh",
     width: "100%"
-    // height: tablet && portrait ? "70%" : portrait ? "80vh" : "100vh",
-    // marginBottom: phone && "17rem"
   };
-  // const topRowContainer = {
-  //   // height: "80vh",
-  //   maxWidth: "100vw",
-  //   // width: "100vw",
-  //   // paddingTop: tablet ? "00vh" : "0vh",
-  //   display: "flex",
-  //   flexDirection: tablet ? "column" : "row",
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  //   // marginBottom: "7em",
-  //   marginTop: "4em"
-  // };
 
   const textStyle = {
     fontWeight: 300,
@@ -61,34 +46,22 @@ export default function Main({
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end"
-    // height: tablet && "100vh",
-    // paddingBottom: "150px",
   };
-
   const leftTextStyle = {
     fontWeight: 300,
     color: "white",
     lineHeight: 1,
-    // height: tablet && "100vh",
     width: tablet ? "80%" : "40vw",
     marginTop: tablet && "1em",
     marginRight: !tablet && "2em",
 
     paddingLeft: "10%",
-    // marginBottom: phone && "30vh",
     borderRight: !tablet && "3px solid ",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
     textAlign: !phone && "right"
   };
-  const avatarContainer = {
-    width: "40vw",
-    display: "flex",
-    justifyContent: tablet ? "center" : "flex-end"
-    // marginTop: phone && !tablet && "10%"
-  };
-
   const avatarStyle = {
     marginBottom: tablet && "3em",
     width: phone ? "200px" : "300px",
@@ -99,20 +72,17 @@ export default function Main({
     boxShadow:
       "9px 9px 20px rgba(8, 25, 36, 0.562), -9px -9px 20px rgba(66, 133, 161, 0.452)"
   };
-
   const secScreenStyle = {
     height: "100vh",
     width: "100%",
     backgroundColor: "#292F36"
   };
-
   const imageContainer = {
     width: phone ? "100%" : "40vw",
     display: "flex",
     justifyContent: tablet ? "center" : "flex-end",
     alignItems: "flex-start"
   };
-
   const imageStyle = {
     width: "100%",
     height: "auto",
@@ -120,15 +90,10 @@ export default function Main({
     boxShadow:
       "7px 7px 12px rgba(20, 20, 20, 1), -7px -7px 12px rgba(100, 100, 100, 0.452)"
   };
-
-  const infoContainerStyle = {
-    // width: "40vw"
-  };
-
+  const infoContainerStyle = {};
   const sectionStyle = {
     paddingTop: tablet && "70px"
   };
-
   const secTitle = {
     margin: 0,
     marginLeft: "0.9rem",
@@ -142,6 +107,7 @@ export default function Main({
     <Fullpage>
       <div style={mainStyle}>
         <FullPageSections>
+          {/* Main */}
           <FullpageSection style={sectionStyle}>
             <div style={screenStyle} className={phone ? "topCol" : "centerRow"}>
               <div style={imageContainer}>
@@ -194,6 +160,7 @@ export default function Main({
             </div>
           </FullpageSection>
 
+          {/* Project 1 */}
           <FullpageSection style={sectionStyle}>
             <div
               style={secScreenStyle}
@@ -235,6 +202,7 @@ export default function Main({
             </div>
           </FullpageSection>
 
+          {/* Project 2 */}
           <FullpageSection style={sectionStyle}>
             <div
               style={secScreenStyle}
@@ -292,6 +260,8 @@ export default function Main({
               </div>
             </div>
           </FullpageSection>
+
+          {/* Project 3 */}
           <FullpageSection style={sectionStyle}>
             <div
               style={secScreenStyle}
@@ -332,6 +302,8 @@ export default function Main({
               </div>
             </div>
           </FullpageSection>
+
+          {/* Footer */}
           <FullpageSection style={sectionStyle}>
             <Footer />
           </FullpageSection>
@@ -340,94 +312,3 @@ export default function Main({
     </Fullpage>
   );
 }
-
-// const projectsStyle = {
-//   marginTop: "10em",
-//   marginLeft: !tablet && "3em",
-//   marginRight: !tablet && "3em",
-//   display: "flex",
-//   flexDirection: "column",
-//   justifyContent: "center",
-//   alignItems: "center",
-//   // maxWidth: "fit-content",
-//   backgroundColor: "#00000077",
-//   borderRadius: "1em",
-//   // height: "fit-content",
-//   width: phone ? "100%" : tablet ? "90%" : desktop ? "90%" : "80%"
-//   // padding: "2em"
-// };
-
-{
-  /* <div style={projectsStyle}>
-        <h2 style={{ color: "white", textAlign: "center", marginTop: "1em" }}>
-          Recent projects
-        </h2>
-        {/* <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            flexDirection: desktop ? "column" : "row",
-            justifyContent: "flex-end",
-            alignItems: "flex-end",
-            maxWidth: "100vw"
-          }}
-        >
-          <Slides dim={{ phone, tablet, desktop }} />
-          <PersonalSlides dim={{ phone, tablet, desktop }} />
-        </div> 
-      <ProjectList dim={{ phone, tablet, desktop }} /> 
-      </div>*/
-}
-
-// <FullpageSection style={sectionStyle}>
-// <div style={screenStyle} className="centerCol">
-//   {/* <div style={topRowContainer}> */}
-//   <div style={avatarContainer}>
-//     <Image fluid src={avatar} roundedCircle style={avatarStyle} />
-//   </div>
-//   <div className="text" style={textStyle}>
-//     <h2 style={{ margin: 0, marginLeft: "1rem", lineHeight: 1 }}>
-//       Hi{"  "}
-//       <span role="img" aria-label="down">
-//         👋
-//       </span>
-//       , I'm
-//     </h2>
-//     <h1
-//       style={{
-//         margin: 0,
-//         marginLeft: "0.9rem",
-//         lineHeight: tablet ? 1 : 1
-//       }}
-//     >
-//       Riccardo Cogoni
-//     </h1>
-//     <h2
-//       style={{
-//         margin: 0,
-//         marginLeft: "1rem",
-//         marginTop: "0.7rem",
-//         marginBottom: "0.7rem",
-//         lineHeight: tablet ? 1 : 1
-//       }}
-//     >
-//       Software Developer
-//     </h2>
-//     <p
-//       style={{
-//         margin: 0,
-//         marginLeft: "1rem",
-//         lineHeight: tablet ? 1 : 1
-//       }}
-//     >
-//       Motivated, personable Software Developer who loves to learn
-//       and creatively solve problems.Ambitious and excited to work on
-//       new projects and other challenging opportunities.
-//     </p>
-//   </div>
-//   <SocialIcons dim={{ phone, tablet }} />
-//   {/* </div> */}
-
-//   {/* <BottomPage dim={{ phone, tablet }}> */}
-// </div>
-// </FullpageSection>
