@@ -2,3 +2,27 @@
     font-size: 3rem;
     color: #00000030;
 }
+
+.centerCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon:hover {
+    animation: raise-container 0.5s;
+}
+
+@keyframes raise-container {
+    from {
+        box-shadow: none;
+        transform: scale(1.8);
+    }
+
+    to {
+        box-shadow: 7px 7px 16px rgba(8, 25, 36, 0.562),
+            -7px -7px 16px rgba(66, 133, 161, 0.452);
+        /* transform: scale(2); */
+    }
+}
