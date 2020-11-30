@@ -1,19 +1,19 @@
 import { Button, Nav, Navbar } from "react-bootstrap";
 import { slide as Menu } from "react-burger-menu";
+import SocialIcons from "./SocialIcons";
 
 export default function MyNavBar({ dim: { phone, tablet } }) {
   const navStyle = {
-    backgroundImage: "linear-gradient(50deg, #0f4667 0%, #2a6973 150%)",
+    // backgroundImage: "linear-gradient(50deg, #0f4667 0%, #2a6973 150%)",
     paddingTop: phone ? "0" : "1rem",
     paddingBottom: phone ? "0" : "1rem",
     paddingRight: tablet ? "2rem" : "3rem",
-    boxShadow:
-      "7px 7px 16px rgba(8, 25, 36, 0.562), -7px -7px 16px rgba(66, 133, 161, 0.452)"
+    minHeight: "70px"
   };
 
   const linkStyle = {
     outline: "none",
-    backgroundColor: "rgba(31, 68, 74, 0.077)",
+    // backgroundColor: "rgba(31, 68, 74, 0.077)",
     border: "none",
     margin: "0.2rem",
     textAlign: "center",
@@ -80,8 +80,9 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
   };
 
   return (
-    <Navbar fixed="top" variant="dark" style={navStyle}>
-      <Navbar.Brand
+    <Navbar fixed="top" variant="dark" style={navStyle} className="nav-shadow">
+      <SocialIcons dim={{ phone, tablet }} />
+      {/* <Navbar.Brand
         href="#home"
         style={{
           fontSize: "3rem",
@@ -90,7 +91,7 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
         }}
       >
         R
-      </Navbar.Brand>
+      </Navbar.Brand> */}
       <Nav className="mr-auto" activeKey="/"></Nav>
       {phone ? (
         <>
@@ -123,12 +124,7 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
           </Nav.Link>
           <Button
             variant="outline-light"
-            style={{
-              borderRadius: "2rem",
-              display: "flex",
-              alignItems: "center",
-              marginLeft: "1.5rem"
-            }}
+            className="main-button"
             href="#contact"
           >
             CONTACT
