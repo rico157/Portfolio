@@ -3,16 +3,18 @@ import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 export default function SocialIcons({ dim: { phone, tablet } }) {
   const iconStyle = {
     color: "white",
-    fontSize: phone ? "2rem" : "2.5rem",
+    fontSize: phone ? "2rem" : "4rem",
 
-    padding: phone ? "0.7rem 1rem" : "0.05em 0.25em 0.2em",
+    padding: phone ? "0.7rem 1rem" : "0.2rem 1rem 0.8rem",
     // paddingTop: "0.5rem",
-    borderRadius: "50em",
-    margin: "0.1rem",
-    lineHeight: 0
+    borderRadius: phone ? "1rem" : "2rem",
+    margin: phone ? "0.7rem" : "1rem",
+    lineHeight: 0,
+    boxShadow:
+      "7px 7px 16px rgba(8, 25, 36, 0.562), -7px -7px 16px rgba(66, 133, 161, 0.452)"
   };
   return (
-    <div style={{ margin: "0.5em 0 0.5em 1em" }}>
+    <div>
       <a href="#home" style={iconStyle} className="icon">
         <FaGithub />
       </a>
