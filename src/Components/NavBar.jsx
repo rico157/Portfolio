@@ -1,10 +1,12 @@
 import { Button, Nav, Navbar } from "react-bootstrap";
 import { slide as Menu } from "react-burger-menu";
+import { Link } from "react-router-dom";
 import SocialIcons from "./SocialIcons";
 
 export default function MyNavBar({ dim: { phone, tablet } }) {
   const navStyle = {
-    // backgroundImage: "linear-gradient(50deg, #0f4667 0%, #2a6973 150%)",
+    // backgroundColor: "#292F36",
+    backgroundImage: "linear-gradient(50deg, #0f4667 0%, #2a6973 150%)",
     paddingTop: phone ? "0" : "1rem",
     paddingBottom: phone ? "0" : "1rem",
     paddingRight: tablet ? "2rem" : "3rem",
@@ -112,9 +114,11 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
         </>
       ) : (
         <Nav>
-          <Nav.Link style={linkStyle} href="/">
-            HOME
-          </Nav.Link>
+          <Link to="/">
+            <Nav.Link style={linkStyle} href="/">
+              HOME
+            </Nav.Link>
+          </Link>
           <Nav.Link style={linkStyle} href="#portfolio">
             PORTFOLIO
           </Nav.Link>
@@ -122,13 +126,15 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
           <Nav.Link style={linkStyle} href="#about">
             ABOUT
           </Nav.Link>
-          <Button
-            variant="outline-light"
-            className="main-button"
-            href="#contact"
-          >
-            CONTACT
-          </Button>
+          <Link to="/contact">
+            <Button
+              variant="outline-light"
+              className="main-button"
+              href="#contact"
+            >
+              CONTACT
+            </Button>
+          </Link>
         </Nav>
       )}
     </Navbar>

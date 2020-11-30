@@ -15,6 +15,7 @@ import { Image } from "react-bootstrap";
 import Footer from "./Footer";
 import SocialIcons from "./SocialIcons";
 import ContactForm from "./SimpleForm";
+import ContactPage from "./ContactPage";
 
 export default function Main({
   dim: { phone, smPhone, tablet, desktop, portrait }
@@ -29,7 +30,7 @@ export default function Main({
     marginBottom: "10rem"
   };
   const screenStyle = {
-    height: "100vh",
+    height: phone ? "calc(100vh - 70px)" : "100vh",
     width: "100%",
     paddingTop: phone ? "80px" : tablet ? "90px" : 0
   };
@@ -84,10 +85,10 @@ export default function Main({
     textAlign: !phone && "right"
   };
   const secScreenStyle = {
-    height: "100vh",
+    height: phone ? "calc(100vh - 70px)" : "100vh",
     width: "100%",
     backgroundColor: "#292F36",
-    paddingTop: phone ? "70px" : tablet ? "45px" : 0
+    marginTop: phone ? "70px" : tablet ? "45px" : 0
   };
   const imageContainer = {
     width: phone ? "100%" : tablet && portrait ? "70vw" : "40vw",
@@ -183,7 +184,8 @@ export default function Main({
               {/* Project 1 */}
               <div style={sectionStyle} className="section">
                 <div
-                  style={secScreenStyle}
+                  // style={{ ...secScreenStyle, backgroundColor: "#DE3E51" }}
+                  style={{ ...secScreenStyle, backgroundColor: "#1D2C36" }}
                   className={
                     phone
                       ? "topCol"
@@ -225,7 +227,7 @@ export default function Main({
               {/* Project 2 */}
               <div style={sectionStyle} className="section">
                 <div
-                  style={secScreenStyle}
+                  style={{ ...secScreenStyle, backgroundColor: "#03253B" }}
                   className={
                     phone
                       ? "topCol reverse flex-end"
@@ -337,71 +339,9 @@ export default function Main({
                 </div>
               </div>
               {/* Contact Form */}
-              <div style={sectionStyle} className="section">
-                <div
-                  style={secScreenStyle}
-                  className={
-                    phone
-                      ? "topCol flex-end"
-                      : tablet && portrait
-                      ? "spaceCol reverse"
-                      : "centerRow"
-                  }
-                >
-                  <div style={infoContainerStyle}>
-                    <div className="text" style={leftTextStyle}>
-                      <h3
-                        style={{
-                          ...headTitleStyle,
-                          marginLeft: tablet && "1rem",
-                          marginRight: !phone && "1rem"
-                        }}
-                      >
-                        Want to
-                      </h3>
-                      <h2
-                        style={{
-                          ...secTitleStyle,
-                          marginRight: "0.9rem",
-                          marginLeft: tablet && "0.9rem"
-                        }}
-                      >
-                        Say Hi 🙋?
-                      </h2>
-                      <h3
-                        style={{
-                          margin: "0.7rem 1rem 0.7rem",
-                          marginLeft: tablet && "1rem",
-                          lineHeight: tablet ? 1 : 1
-                        }}
-                      >
-                        Leave a message and I'll be back to you as soon as
-                        possible!
-                      </h3>
-                      {/* <p
-                    style={{
-                      margin: "0 1rem",
-                      lineHeight: tablet ? 1.2 : 1,
-                      marginLeft: tablet && "1rem"
-                    }}
-                  >
-                    Full-Stack social news aggregation, web content rating, and
-                    discussion web application developed with React, PostgreSQL
-                    and NodeJS.
-                  </p> */}
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      ...formContainer,
-                      marginLeft: !phone && tablet && "0em",
-                      marginRight: !phone && tablet && "2em"
-                    }}
-                  >
-                    <ContactForm />
-                  </div>
-                </div>
-              </div>
+              <ContactPage
+                dim={{ phone, smPhone, tablet, desktop, portrait }}
+              />
               {/* Footer */}
               <div style={sectionStyle} className="section">
                 <Footer />
