@@ -4,10 +4,10 @@ import avatar from "../assets/avatar.png";
 import news from "../assets/news.jpg";
 import matesrates from "../assets/matesrates.jpg";
 import ds from "../assets/ds.png";
-// Components
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+// Icons
+import { FaGithub } from "react-icons/fa";
 import { BiWorld } from "react-icons/bi";
-
+// Components
 import { Button, Image } from "react-bootstrap";
 import Footer from "./Footer";
 import ContactPage from "./ContactPage";
