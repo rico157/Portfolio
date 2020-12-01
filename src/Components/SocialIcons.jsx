@@ -26,14 +26,32 @@ export default function SocialIcons({ dim: { phone, tablet } }) {
         </>
       ) : undefined}
       {!phone ? (
-        <a href="#home" style={iconStyle} className="icon">
+        <a
+          href="https://github.com/rico157"
+          target="_blank"
+          rel="noreferrer"
+          style={iconStyle}
+          className="icon"
+        >
           <FaGithub />
         </a>
       ) : undefined}
-      <a href="#home" style={iconStyle} className="icon">
+      <a
+        href="https://twitter.com/riccardo_cogoni"
+        target="_blank"
+        rel="noreferrer"
+        style={iconStyle}
+        className="icon"
+      >
         <FaTwitter />
       </a>
-      <a href="#home" style={iconStyle} className="icon">
+      <a
+        href="https://www.linkedin.com/in/riccardo-cogoni/"
+        target="_blank"
+        rel="noreferrer"
+        style={iconStyle}
+        className="icon"
+      >
         <FaLinkedinIn />
       </a>
     </div>
