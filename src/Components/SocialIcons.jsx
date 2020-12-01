@@ -1,5 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { BiMessageSquareAdd } from "react-icons/bi";
+import { Link } from "react-router-dom";
 export default function SocialIcons({ dim: { phone, tablet } }) {
   const iconStyle = {
     color: "white",
@@ -22,6 +24,11 @@ export default function SocialIcons({ dim: { phone, tablet } }) {
       <a href="#home" style={iconStyle} className="icon">
         <FaLinkedinIn />
       </a>
+      {phone && (
+        <Link to="/contact" style={iconStyle} className="icon">
+          <BiMessageSquareAdd />
+        </Link>
+      )}
     </div>
   );
 }

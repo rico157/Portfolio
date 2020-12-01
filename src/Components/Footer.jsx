@@ -3,6 +3,7 @@ import { Button, Nav, Navbar } from "react-bootstrap";
 
 export default function Footer() {
   const footer = {
+    color: "#CFD8E3"
     // boxShadow: "inset 15px 15px 20px rgba(8, 25, 36, 0.562)"
   };
 
@@ -18,7 +19,7 @@ export default function Footer() {
             😌{" "}
           </span>
         </h2>
-        <Button
+        {/* <Button
           variant="outline-light"
           style={{
             borderRadius: "2rem",
@@ -29,7 +30,7 @@ export default function Footer() {
           href="#contact"
         >
           CONTACT
-        </Button>
+        </Button> */}
       </Nav>
       {/* <Nav className="m-auto">
         <Nav.Link href="#home">HOME</Nav.Link>
