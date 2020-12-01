@@ -31,17 +31,17 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
       <Nav className={phone ? undefined : "mr-auto"}></Nav>
       {!phone && (
         <Nav className="centerRow">
-          <Link style={linkStyle} to="/">
+          <Link style={linkStyle} to="/" className="main-shadow">
             HOME
           </Link>
-          <Link style={linkStyle} to="/about">
+          <Link style={linkStyle} to="/about" className="main-shadow">
             ABOUT
           </Link>
 
           <Link to="/contact">
             <Button
               variant="outline-light"
-              className="main-button"
+              className="main-button main-shadow"
               style={{ marginLeft: "2em" }}
             >
               CONTACT
