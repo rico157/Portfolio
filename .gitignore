@@ -25,3 +25,5 @@ yarn-error.log*
 # personal
 jsx-notes.jsx
 .xComponents
+color-palette.css
+src/Components/RecentProjects.jsx
