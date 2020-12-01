@@ -2,6 +2,7 @@ import { Button, Nav, Navbar } from "react-bootstrap";
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import SocialIcons from "./SocialIcons";
+import { BiMessageSquareAdd } from "react-icons/bi";
 
 export default function MyNavBar({ dim: { phone, tablet } }) {
   const navStyle = {
@@ -17,73 +18,19 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
     outline: "none",
     // backgroundColor: "rgba(31, 68, 74, 0.077)",
     border: "none",
-    margin: "0.2rem",
+    margin: "0.2rem 1em 0 1em",
     textAlign: "center",
     textDecoration: "none",
     display: "inline-block",
-    fontSize: "0.9rem"
-  };
-
-  const styles = {
-    bmBurgerButton: {
-      position: "fixed",
-      width: "36px",
-      height: "30px",
-      right: "26px",
-      top: "20px"
-    },
-    bmBurgerBars: {
-      background: "#e6e6e6"
-    },
-    bmBurgerBarsHover: {
-      background: "#a90000"
-    },
-    bmCrossButton: {
-      height: "54px",
-      width: "54px"
-    },
-    bmCross: {
-      background: "#bdc3c7"
-    },
-    bmMenuWrap: {
-      position: "fixed",
-      top: "0",
-      height: "100vh",
-      width: "fit-content"
-    },
-    bmMenu: {
-      boxShadow:
-        "7px 7px 16px rgba(8, 25, 36, 0.562), -7px -7px 16px rgba(8, 25, 36, 0.562)",
-      height: "100vh",
-
-      background: "#0F4667",
-      padding: "2.5em 2.5em 0",
-      fontSize: "1.15em"
-    },
-    bmMorphShape: {
-      fill: "#373a47"
-    },
-    bmItemList: {
-      color: "#b8b7ad",
-      padding: "0.8em"
-    },
-    bmItem: {
-      marginTop: "0.8rem",
-      display: "flex",
-      flexDirection: "column",
-      color: "white",
-      borderTop: "1px solid",
-      fontSize: "1.7rem",
-      width: "100%"
-    },
-    bmOverlay: {
-      background: "rgba(0, 0, 0, 0.3)"
-    }
+    fontSize: "0.9rem",
+    color: "white"
   };
 
   return (
     <Navbar fixed="top" variant="dark" style={navStyle} className="nav-shadow">
-      <SocialIcons dim={{ phone, tablet }} />
+      <Nav className={!phone ? undefined : "m-auto"}>
+        <SocialIcons dim={{ phone, tablet }} />
+      </Nav>
       {/* <Navbar.Brand
         href="#home"
         style={{
@@ -94,43 +41,25 @@ export default function MyNavBar({ dim: { phone, tablet } }) {
       >
         R
       </Navbar.Brand> */}
-      <Nav className="mr-auto" activeKey="/"></Nav>
-      {phone ? (
-        <>
-          <Menu right width={80} styles={styles}>
-            <a id="home" className="menu-item" href="/">
-              HOME
-            </a>
-            <a id="portfolio" className="menu-item" href="/portfolio">
-              PORTFOLIO
-            </a>
-            <a id="contact" className="menu-item" href="/contact">
-              CONTACT
-            </a>
-            <a id="about" className="menu-item" href="/about">
-              ABOUT
-            </a>
-          </Menu>
-        </>
-      ) : (
-        <Nav>
-          <Link to="/">
-            <Nav.Link style={linkStyle} href="/">
-              HOME
-            </Nav.Link>
+      <Nav className={phone ? undefined : "mr-auto"}></Nav>
+      {!phone && (
+        <Nav className="centerRow">
+          <Link style={linkStyle} to="/">
+            HOME
           </Link>
-          <Nav.Link style={linkStyle} href="#portfolio">
-            PORTFOLIO
-          </Nav.Link>
-
-          <Nav.Link style={linkStyle} href="#about">
+          <Link style={linkStyle} to="/about">
             ABOUT
-          </Nav.Link>
+          </Link>
+
+          {/* <Nav.Link style={linkStyle} href="#about">
+            ABOUT
+          </Nav.Link> */}
           <Link to="/contact">
             <Button
               variant="outline-light"
               className="main-button"
-              href="#contact"
+              style={{ marginLeft: "2em" }}
+              // href="/contact"
             >
               CONTACT
             </Button>

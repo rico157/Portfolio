@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import SimpleForm from "./SimpleForm";
 
 export default function ContactPage({
   dim: { phone, smPhone, tablet, desktop, portrait }
 }) {
-  const [notSmall, setNotSmall] = useState(!smPhone);
+  const landTablet = !phone && tablet && !portrait;
+  const [notSmall, setNotSmall] = useState(!smPhone && !landTablet);
 
   const leftTextStyle = {
     display: "flex",
@@ -27,8 +29,7 @@ export default function ContactPage({
     backgroundColor: "#CFD8E3",
     paddingTop: phone ? "70px" : tablet ? "45px" : 0
   };
-  const infoContainerStyle = {};
-  const sectionStyle = {};
+
   const secTitleStyle = {
     margin: 0,
     marginLeft: "0.9rem",
@@ -39,21 +40,24 @@ export default function ContactPage({
   };
   const headTitleStyle = { margin: "0 0 0 1rem", lineHeight: 1 };
   const formContainer = {
-    width: phone ? "100%" : tablet && portrait ? "70vw" : "40vw",
-    height: phone ? "100%" : tablet && portrait ? "70vh" : "60vh",
+    width: phone ? "100%" : tablet && !portrait ? "80vw" : "40vw",
+    height: phone ? "100%" : "60vh",
+
     minHeight: smPhone && "100vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    marginLeft: !phone && tablet && "2em",
     borderRadius: phone ? 0 : tablet ? "2em" : "3em",
     backgroundColor: "#292F36",
-    color: "white"
+    color: "#CFD8E3",
+    marginLeft: !phone && tablet && "0em",
+    marginRight: !phone && "2em",
+    boxShadow: "7px 7px 12px rgba(20, 20, 20, 1)"
   };
 
   return (
-    <div style={sectionStyle} className="section">
+    <>
       <div
         style={secScreenStyle}
         className={
@@ -66,7 +70,7 @@ export default function ContactPage({
       >
         <div
           style={{ height: smPhone && "100%", margin: "3em 0 3em 0" }}
-          className={smPhone && "centerCol"}
+          className={smPhone ? "centerCol" : undefined}
         >
           <div className="text" style={leftTextStyle}>
             <h3
@@ -94,29 +98,23 @@ export default function ContactPage({
                 lineHeight: tablet ? 1 : 1
               }}
             >
-              Leave a message and I'll be back to you as soon as possible!
+              Leave a message and I'll get back to you as soon as possible!
             </h3>
           </div>
-          {smPhone && (
+        </div>
+        {smPhone || landTablet ? (
+          <Link to="/form">
             <Button
               variant="dark"
-              style={{ margin: "2em 0 2em 0", fontSize: "2rem" }}
+              style={{ margin: "2em 0 2em 0", fontSize: "1.5rem" }}
               className="main-button  nav-shadow"
-              onClick={() => setNotSmall(true)}
             >
               Get in touch!
             </Button>
-          )}
-        </div>
+          </Link>
+        ) : undefined}
         {notSmall && (
-          <div
-            style={{
-              ...formContainer,
-              marginLeft: !phone && tablet && "0em",
-              marginRight: !phone && tablet && "2em",
-              boxShadow: "7px 7px 12px rgba(20, 20, 20, 1)"
-            }}
-          >
+          <div style={formContainer}>
             <h2
               style={{
                 margin: 0,
@@ -130,6 +128,6 @@ export default function ContactPage({
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 }

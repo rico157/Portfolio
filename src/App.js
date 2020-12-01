@@ -5,6 +5,8 @@ import "./styles/App.css";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ContactPage from "./Components/ContactPage";
+import FormPage from "./Components/FormPage";
+import About from "./Components/About";
 
 function App() {
   const { width, height } = useWindowDimensions();
@@ -24,8 +26,14 @@ function App() {
       <div className="App" style={appStyle}>
         <NavBar dim={{ ...sizes }} />
         <Switch>
+          <Route path="/about">
+            <About dim={{ ...sizes }} />
+          </Route>
           <Route path="/contact">
             <ContactPage dim={{ ...sizes }} />
+          </Route>
+          <Route path="/form">
+            <FormPage dim={{ ...sizes }} />
           </Route>
           <Route path="/">
             <Main dim={{ ...sizes }} />
