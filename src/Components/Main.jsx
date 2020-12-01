@@ -269,6 +269,8 @@ export default function Main({
                 }}
                 className="main-button  shadow"
                 href="https://github.com/rico157/MatesRates"
+                rel="noreferrer"
+                target="_blank"
               >
                 <FaGithub style={{ marginRight: "0.5em" }} /> MOBILE
               </Button>
@@ -280,7 +282,9 @@ export default function Main({
                   margin: tablet ? "1em 0.3em 1em 0.3em" : "1em"
                 }}
                 className="main-button  shadow"
-                href="https://github.com/rico157/BE-MatesRates1"
+                href="https://github.com/rico157/BE-Mates-Rates-1"
+                rel="noreferrer"
+                target="_blank"
               >
                 <FaGithub style={{ marginRight: "0.5em" }} /> BACKEND
               </Button>
@@ -345,6 +349,8 @@ export default function Main({
                 }}
                 className="main-button  shadow"
                 href="https://rico-fake-news.netlify.app/"
+                rel="noreferrer"
+                target="_blank"
               >
                 <BiWorld style={{ marginRight: "0.5em" }} /> LIVE
               </Button>
@@ -357,6 +363,8 @@ export default function Main({
                 }}
                 className="main-button  shadow"
                 href="https://github.com/rico157/rico-fake-news"
+                rel="noreferrer"
+                target="_blank"
               >
                 <FaGithub style={{ marginRight: "0.5em" }} /> REPO
               </Button>
