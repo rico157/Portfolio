@@ -72,7 +72,6 @@ export default function RecentProjects({
       {/* Project 1 */}
       <div style={sectionStyle} className="section">
         <div
-          // style={{ ...secScreenStyle, backgroundColor: "#DE3E51" }}
           style={{ ...secScreenStyle, backgroundColor: "#1D2C36" }}
           className={
             phone ? "topCol" : tablet && portrait ? "spaceCol" : "centerRow"
@@ -83,8 +82,12 @@ export default function RecentProjects({
           </div>
           <div style={infoContainerStyle}>
             <div className="text" style={textStyle}>
-              <h3 style={headTitleStyle}></h3>
-              <h2 style={secTitleStyle}>About me... 👀</h2>
+              <h2 style={secTitleStyle}>
+                About me...{" "}
+                <span role="img" aria-label="down">
+                  👀{" "}
+                </span>
+              </h2>
               <h3
                 style={{
                   margin: "0.7rem 0 0.7rem 1rem",
@@ -224,11 +227,19 @@ export default function RecentProjects({
                 >
                   <li className="list-title">Images</li>
                   <li>
-                    <a href="https://unsplash.com/" target="_blank">
+                    <a
+                      href="https://unsplash.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Unsplash
                     </a>{" "}
                     •{" "}
-                    <a href="https://www.pexels.com/" target="_blank">
+                    <a
+                      href="https://www.pexels.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Pexels
                     </a>{" "}
                   </li>
@@ -237,6 +248,7 @@ export default function RecentProjects({
                     <a
                       href="https://react-icons.github.io/react-icons/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       react-icons
                     </a>{" "}

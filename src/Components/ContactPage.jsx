@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import SimpleForm from "./SimpleForm";
@@ -7,7 +7,7 @@ export default function ContactPage({
   dim: { phone, smPhone, tablet, desktop, portrait }
 }) {
   const landTablet = !phone && tablet && !portrait;
-  const [notSmall, setNotSmall] = useState(!smPhone && !landTablet);
+  const notSmall = !smPhone && !landTablet;
 
   const leftTextStyle = {
     display: "flex",
