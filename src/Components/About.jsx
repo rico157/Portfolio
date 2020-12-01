@@ -36,10 +36,10 @@ export default function RecentProjects({
     textAlign: !phone && "right"
   };
   const secScreenStyle = {
-    height: phone ? "calc(100vh - 70px)" : "100vh",
+    height: phone ? "100%" : "100vh",
     width: "100%",
     backgroundColor: "#292F36",
-    marginTop: phone ? "70px" : tablet ? "45px" : 0
+    paddingTop: phone ? "70px" : tablet ? "45px" : 0
   };
   const imageContainer = {
     width: phone ? "100%" : tablet && portrait ? "70vw" : "40vw",

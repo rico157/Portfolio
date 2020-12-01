@@ -104,8 +104,8 @@ export default function Main({
     height: "100vh",
     width: "100%",
     backgroundColor: "#292F36",
-    paddingTop: phone ? "70px" : tablet ? "45px" : 0,
-    marginTop: phone ? "70px" : tablet ? "45px" : 0
+    paddingTop: phone ? "70px" : tablet ? "45px" : 0
+    // marginTop: phone ? "70px" : tablet ? "45px" : 0
   };
 
   return (

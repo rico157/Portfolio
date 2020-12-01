@@ -40,7 +40,7 @@ export default function ContactPage({
   };
   const headTitleStyle = { margin: "0 0 0 1rem", lineHeight: 1 };
   const formContainer = {
-    width: phone ? "100%" : tablet && !portrait ? "80vw" : "40vw",
+    width: phone ? "100%" : tablet && portrait ? "80vw" : "40vw",
     height: phone ? "100%" : "60vh",
 
     minHeight: smPhone && "100vh",
