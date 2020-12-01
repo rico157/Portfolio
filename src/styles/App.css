@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     padding: 0.2rem 1em 0.2rem 1em;
-
+    justify-content: center;
 }
 
 .centerCol {
@@ -18,6 +18,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    width: 100vw
 }
 
 .topCol {
@@ -40,6 +41,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+}
+
+.startRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
 }
 

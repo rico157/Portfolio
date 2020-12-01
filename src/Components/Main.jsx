@@ -5,15 +5,19 @@ import news from "../assets/news.jpg";
 import matesrates from "../assets/matesrates.jpg";
 import ds from "../assets/ds.png";
 // Components
-import { Image } from "react-bootstrap";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { BiWorld } from "react-icons/bi";
+
+import { Button, Image } from "react-bootstrap";
 import Footer from "./Footer";
 import ContactPage from "./ContactPage";
+import { Link } from "react-router-dom";
 
 export default function Main({
   dim: { phone, smPhone, tablet, desktop, portrait }
 }) {
   const screenStyle = {
-    height: phone ? "calc(100vh - 70px)" : "100vh",
+    minHeight: "100vh",
     width: "100%",
     paddingTop: phone ? "80px" : tablet ? "90px" : 0
   };
@@ -52,6 +56,7 @@ export default function Main({
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end"
+    // alignItems: "center"
   };
   const imageContainer = {
     width: phone ? "100%" : tablet && portrait ? "70vw" : "40vw",
@@ -134,8 +139,22 @@ export default function Main({
             <p style={paragraphStyle}>
               Motivated, personable Software Developer who loves to learn and
               creatively solve problems.Ambitious and excited to work on new
-              projects and other challenging opportunities.
+              projects and other challenging opportunities.{" "}
+              <Link to="/about">More about me...</Link>
             </p>
+            <Link to="/contact">
+              <Button
+                variant="dark"
+                style={{
+                  fontSize: "1rem",
+                  width: "fit-content",
+                  margin: "1em"
+                }}
+                className="main-button  shadow"
+              >
+                Get in touch!
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -167,9 +186,11 @@ export default function Main({
                 lineHeight: tablet ? 1.2 : 1
               }}
             >
-              Full-Stack social news aggregation, web content rating, and
-              discussion web application developed with React, PostgreSQL and
-              NodeJS.
+              I'm currently working on an app that allows the user to scan a QR
+              code with a smartphone and being redirected to a local webpage
+              with controls on screen to switch between MacOS desktops.
+              <br />
+              Repository coming soon!
             </p>
           </div>
         </div>
@@ -225,10 +246,45 @@ export default function Main({
                 marginLeft: tablet && "1rem"
               }}
             >
-              Full-Stack social news aggregation, web content rating, and
-              discussion web application developed with React, PostgreSQL and
-              NodeJS.
+              Agile • MVP • Team Project
+              <br />
+              MatesRates allows users to search restaurants around the country
+              and see reviews and ratings made by only their close friends. This
+              way the user knows the reviews they read are trustworthy and
+              meaningful.
             </p>
+            <div
+              style={{
+                marginLeft: tablet && "2rem",
+                fontSize: tablet && "0.7em"
+              }}
+              className="startRow flex-end"
+            >
+              <Button
+                variant="dark"
+                style={{
+                  fontSize: "1rem",
+                  width: "fit-content",
+                  margin: tablet ? "1em 0.3em 1em 0.3em" : "1em"
+                }}
+                className="main-button  shadow"
+                href="https://github.com/rico157/MatesRates"
+              >
+                <FaGithub style={{ marginRight: "0.5em" }} /> MOBILE
+              </Button>
+              <Button
+                variant="dark"
+                style={{
+                  fontSize: "1rem",
+                  width: "fit-content",
+                  margin: tablet ? "1em 0.3em 1em 0.3em" : "1em"
+                }}
+                className="main-button  shadow"
+                href="https://github.com/rico157/BE-MatesRates1"
+              >
+                <FaGithub style={{ marginRight: "0.5em" }} /> BACKEND
+              </Button>
+            </div>
           </div>
         </div>
         <div
@@ -279,6 +335,32 @@ export default function Main({
               discussion web application developed with React, PostgreSQL and
               NodeJS.
             </p>
+            <div style={{ margin: "0 1rem" }} className="startRow">
+              <Button
+                variant="light"
+                style={{
+                  fontSize: "1rem",
+                  width: "fit-content",
+                  margin: "1em"
+                }}
+                className="main-button  shadow"
+                href="https://rico-fake-news.netlify.app/"
+              >
+                <BiWorld style={{ marginRight: "0.5em" }} /> LIVE
+              </Button>
+              <Button
+                variant="light"
+                style={{
+                  fontSize: "1rem",
+                  width: "fit-content",
+                  margin: "1em"
+                }}
+                className="main-button  shadow"
+                href="https://github.com/rico157/rico-fake-news"
+              >
+                <FaGithub style={{ marginRight: "0.5em" }} /> REPO
+              </Button>
+            </div>
           </div>
         </div>
       </div>
