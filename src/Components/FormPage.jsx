@@ -21,8 +21,6 @@ export default class MyForm extends React.Component {
           width: "100%",
           minHeight: "100%",
           padding: "100px 3em 3em 3em ",
-          color: "white",
-          // backgroundColor: "#292F36",
           color: "#CFD8E3"
         }}
         className="centerCol"
