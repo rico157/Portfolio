@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ContactPage from "./Components/ContactPage";
 import FormPage from "./Components/FormPage";
 import About from "./Components/About";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   const { width, height } = useWindowDimensions();
@@ -25,6 +26,7 @@ function App() {
     <Router>
       <div className="App" style={appStyle}>
         <NavBar dim={{ ...sizes }} />
+        <ScrollToTop />
         <Switch>
           <Route path="/about">
             <About dim={{ ...sizes }} />
