@@ -87,3 +87,17 @@
         /* transform: scale(2); */
     }
 }
+
+.list-title {
+    text-decoration: underline;
+
+    padding: 0.8rem 0 0.4rem 0
+}
+
+a {
+    color: #35909f
+}
+
+a:hover {
+    color: #67b2bd
+}
