@@ -106,15 +106,14 @@ export default function RecentProjects({
                 }}
               >
                 <li>
-                  Recently graduated from Northcoders, a multi-award-winning
-                  coding bootcamp, I worked in an agile environment developing
-                  multiple projects during the course whilst trying the newly
-                  learned technologies after working hours.
+                  I recently graduated from Northcoders, a multi-award-winning
+                  coding bootcamp. I have worked in an agile environment
+                  developing multiple projects.
                 </li>
                 <li>
-                  Made my first Android app prototype whilst working as
-                  bartender, that showed a list of cocktail recipes to help me
-                  and my team learn new seasonal cocktails. new cocktails.
+                  Made my first Android app prototype whilst working as a
+                  bartender, that showed a list of cocktail recipes to help my
+                  team and I learn new seasonal cocktails.
                 </li>
                 <li>
                   I wrote my first line of code during my early teenage years
