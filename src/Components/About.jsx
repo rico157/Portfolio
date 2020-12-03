@@ -112,9 +112,9 @@ export default function RecentProjects({
                   learned technologies after working hours.
                 </li>
                 <li>
-                  Made my first Android app prototype in 2017, whilst working as
-                  a bartender, to show a list of cocktail recipes to help learn
-                  new cocktails.
+                  Made my first Android app prototype whilst working as
+                  bartender, that showed a list of cocktail recipes to help me
+                  and my team learn new seasonal cocktails. new cocktails.
                 </li>
                 <li>
                   I wrote my first line of code during my early teenage years
@@ -214,7 +214,7 @@ export default function RecentProjects({
               <h3 style={{ margin: 0, marginLeft: "1rem", lineHeight: 1 }}>
                 What I used to make this website
               </h3>
-              <h2 style={secTitleStyle}>@attributes</h2>
+              <h2 style={secTitleStyle}>Acknowledgements</h2>
               <h3>
                 <ul
                   style={{

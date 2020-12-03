@@ -6,7 +6,7 @@ import matesrates from "../assets/matesrates.jpg";
 import ds from "../assets/ds.png";
 // Icons
 import { FaGithub } from "react-icons/fa";
-import { BiWorld } from "react-icons/bi";
+// import { BiWorld } from "react-icons/bi";
 // Components
 import { Button, Image } from "react-bootstrap";
 import Footer from "./Footer";
@@ -169,8 +169,8 @@ export default function Main({
         </div>
         <div style={infoContainerStyle}>
           <div className="text" style={textStyle}>
-            <h3 style={headTitleStyle}>Currently working on...</h3>
-            <h2 style={secTitleStyle}>Desktop Switcher</h2>
+            <h3 style={headTitleStyle}>Recently made</h3>
+            <h2 style={secTitleStyle}>Between Spaces</h2>
             <h3
               style={{
                 margin: "0.7rem 0 0.7rem 1rem",
@@ -186,11 +186,30 @@ export default function Main({
                 lineHeight: tablet ? 1.2 : 1
               }}
             >
-              I'm currently working on an app that allows the user to scan a QR
-              code with a smartphone and being redirected to a local webpage
-              with controls on screen to switch between MacOS desktops.
-              <br />
-              Repository coming soon!
+              Between Spaces is an app prototype that allows you to move between
+              desktop spaces with your phone.
+              <div
+                style={{
+                  marginLeft: tablet && "2rem",
+                  fontSize: tablet && "0.7em"
+                }}
+                className="startRow"
+              >
+                <Button
+                  variant="dark"
+                  style={{
+                    fontSize: "1rem",
+                    width: "fit-content",
+                    margin: tablet ? "1em 0.3em 1em 0.3em" : "1em"
+                  }}
+                  className="main-button  shadow"
+                  href="https://github.com/rico157/between-spaces"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <FaGithub style={{ marginRight: "0.5em" }} /> REPO
+                </Button>
+              </div>
             </p>
           </div>
         </div>
@@ -272,7 +291,7 @@ export default function Main({
                 rel="noreferrer"
                 target="_blank"
               >
-                <FaGithub style={{ marginRight: "0.5em" }} /> MOBILE
+                <FaGithub style={{ marginRight: "0.5em" }} /> REPO
               </Button>
               <Button
                 variant="dark"
@@ -286,7 +305,7 @@ export default function Main({
                 rel="noreferrer"
                 target="_blank"
               >
-                <FaGithub style={{ marginRight: "0.5em" }} /> BACKEND
+                <FaGithub style={{ marginRight: "0.5em" }} /> API
               </Button>
             </div>
           </div>
@@ -348,11 +367,11 @@ export default function Main({
                   margin: "1em"
                 }}
                 className="main-button  shadow"
-                href="https://rico-fake-news.netlify.app/"
+                href="https://github.com/rico157/rico-fake-news"
                 rel="noreferrer"
                 target="_blank"
               >
-                <BiWorld style={{ marginRight: "0.5em" }} /> LIVE
+                <FaGithub style={{ marginRight: "0.5em" }} /> REPO
               </Button>
               <Button
                 variant="light"
@@ -362,11 +381,11 @@ export default function Main({
                   margin: "1em"
                 }}
                 className="main-button  shadow"
-                href="https://github.com/rico157/rico-fake-news"
+                href="https://github.com/rico157/rico-fake-news-api"
                 rel="noreferrer"
                 target="_blank"
               >
-                <FaGithub style={{ marginRight: "0.5em" }} /> REPO
+                <FaGithub style={{ marginRight: "0.5em" }} /> API
               </Button>
             </div>
           </div>
