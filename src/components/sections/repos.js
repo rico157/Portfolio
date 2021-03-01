@@ -165,12 +165,12 @@ const Repos = () => {
         <div className="repos">
           {repos.map(repo => (
             <a
-              href={repo.url}
+              href={repo.html_url}
               target="_blank"
               rel="nofollow noopener noreferrer"
               title={repo.name}
-              aria-label={repo.url}
-              key={repo.url}
+              aria-label={repo.html_url}
+              key={repo.html_url}
             >
               <div className="card">
                 <span className="category">
