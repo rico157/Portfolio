@@ -13,12 +13,12 @@ import Underlining from "../../styles/underlining"
 import Icon from "../../components/icons"
 import { lightTheme, darkTheme } from "../../styles/theme"
 
-const StyledSection = styled.section`
+const StyledSection = motion.custom(styled.section`
   width: 100%;
   height: auto;
   background: ${({ theme }) => theme.colors.background};
   margin-top: 6rem;
-`
+`)
 
 const StyledContentWrapper = styled(ContentWrapper)`
   && {
@@ -191,10 +191,11 @@ const StyledProject = styled(motion.div)`
 `
 
 const Projects = ({ content }) => {
-  const { darkMode } = useContext(Context).state
+  const { isIntroDone, darkMode } = useContext(Context).state
   const sectionDetails = content[0].node
   const projects = content.slice(1, content.length)
 
+  const projControls = useAnimation()
   // visibleProject is needed to show which project is currently
   // being viewed in the horizontal slider on mobile and tablet
   const [visibleProject, setVisibleProject] = useState(1)
@@ -227,7 +228,17 @@ const Projects = ({ content }) => {
     })
     setOnScreen(initial)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    const introLoad = async () => {
+      if (isIntroDone) {
+        await projControls.start({
+          opacity: 1,
+          y: 0,
+          transition: { delay: 1 },
+        })
+      }
+    }
+    introLoad()
+  }, [isIntroDone])
 
   // Required for animating the title
   const tRef = useRef()
@@ -238,7 +249,11 @@ const Projects = ({ content }) => {
   }
 
   return (
-    <StyledSection id="projects">
+    <StyledSection
+      id="projects"
+      initial={{ opacity: 0, y: 20 }}
+      animate={projControls}
+    >
       <StyledContentWrapper>
         <motion.div
           ref={tRef}
