@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://rico157.github.io/sitemap.xml
+Host: https://rico157.github.io
