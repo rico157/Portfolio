@@ -51,6 +51,14 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `https://github.com/rico157/rico157.github.io/blob/gatsby-portfolio/content/index/preview/preview.png?raw=true`,
+        },
+        {
+          name: `twitter:image`,
+          content: `https://github.com/rico157/rico157.github.io/blob/gatsby-portfolio/content/index/preview/preview.png?raw=true`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },

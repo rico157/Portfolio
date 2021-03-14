@@ -5,7 +5,7 @@ module.exports = {
   siteShortTitle: "r. ", // Used as logo text in header, footer, and splash screen
   siteDescription:
     "A modern one-page portfolio with a clean yet expressive design.",
-  siteUrl: "https://rico157.github.io/",
+  siteUrl: "https://www.riccardocogoni.com",
   siteLanguage: "en_US",
   siteIcon: "content/favicon.png", // Relative to gatsby-config file
   seoTitleSuffix: "Portfolio - Riccardo Cogoni", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
@@ -51,7 +51,7 @@ module.exports = {
   socialMedia: [
     {
       name: "Linkedin",
-      url: "https://www.linkedin.com/in/riccardo-cogoni//",
+      url: "https://www.linkedin.com/in/riccardo-cogoni/",
     },
     {
       name: "Github",
