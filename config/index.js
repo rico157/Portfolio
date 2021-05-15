@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: "Porfolio - Rico",
   siteShortTitle: "r. ", // Used as logo text in header, footer, and splash screen
   siteDescription:
-    "A modern one-page portfolio with a clean yet expressive design.",
+    "Hey I'm Riccardo! I'm a software developer and I love building applications. Here is where you can see my recent projects!",
   siteUrl: "https://www.riccardocogoni.com",
   siteLanguage: "en_US",
   siteIcon: "content/favicon.png", // Relative to gatsby-config file
@@ -25,13 +25,13 @@ module.exports = {
       boxShadowHover: "rgba(0, 0, 0, 0.32)",
     },
     darkTheme: {
-      primary: "#FAFAFA",
-      secondary: "#2A2926",
-      tertiary: "#252525",
-      text: "rgba(255, 255, 255, 0.87)",
-      subtext: "#AAAAAA",
-      background: "#121212",
-      card: "#1C1C1C",
+      primary: "#FFE7AD",
+      secondary: "#15616d",
+      tertiary: "#15616d",
+      text: "#ffd166",
+      subtext: "#ef476f",
+      background: "#023047",
+      card: "#003049",
       scrollBar: "rgba(255, 255, 255, 0.5)",
       boxShadow: "rgba(0, 0, 0, 0.16)",
       boxShadowHover: "rgba(0, 0, 0, 0.32)",

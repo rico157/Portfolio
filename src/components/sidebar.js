@@ -99,7 +99,7 @@ const Sidebar = ({ open, setOpen }) => {
           >
             {button.name}
           </Link>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </StyledNav>
       </StyledContainer>
       <StyledBackdrop open={open} />

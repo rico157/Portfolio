@@ -69,7 +69,7 @@ const Navbar = () => {
       <Link className="cta-btn" to={button.url}>
         {button.name}
       </Link>
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
     </StyledNav>
   )
 }

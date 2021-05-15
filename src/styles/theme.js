@@ -16,7 +16,7 @@ export const sharedPreferences = {
 
 export const lightTheme = {
   ...sharedPreferences,
-  colors: colors.lightTheme,
+  colors: colors.darkTheme,
 }
 
 export const darkTheme = {
