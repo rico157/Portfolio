@@ -109,7 +109,7 @@ const Hero = ({ content }) => {
 
   return (
     <StyledSection id="hero">
-      {!isIntroDone && <SplashScreen />}
+      {/* {!isIntroDone && <SplashScreen />} */}
       <StyledContentWrapper>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
